@@ -6,8 +6,10 @@ __By Michael McMillan__
 __The JavaScript Environment__  
 Download SpiderMonkey's [Nightly Build](https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central/) JavaScript shell for your OS platform.  
 Unzip the download (`jsshell-win64.zip`), move it to the c: drive (`C:\jsshell-win64`) and add the path to your environment variable.  
-Use the `js` command to state and interactive shell
+Use the `js` command to start an interactive shell
 ```
 > js  
 js >
 ```
+
+## Chapter 2: Arrays
