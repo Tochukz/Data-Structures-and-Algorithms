@@ -3,18 +3,18 @@ function showScope() {
 }
 
 var scope = "global";
-print(scope);
-print(showScope());
+print(scope);       // global
+print(showScope()); // global
 
 for(var i =0; i < 5; i++) {
     print(i);
 }
-print(i); // (1)
+print(i); // 5
 
 for(let x =0; x < 5; x++) {
     print(x);
 }
-// print(x); // (2)
+// print(x); // ReferenceError: x is not defined
 
 
 /**
