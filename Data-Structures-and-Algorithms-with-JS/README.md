@@ -70,3 +70,51 @@ in a file named `recursion.csx` and will be executed by using the command
 
 ## Chapter 2: Arrays
 The array is the most common data structure in most if not all programming languages.   
+
+## Chapter 3: Lists  
+Lists are especially useful if we don't have to perform searches on the items in the list or put them into some type of sorted order.  
+When we need to perform long searches or complex sorts, lists become less useful, especially with more complex data structures.  
+
+__Iterating Through a List__   
+An iterator allows us to transverse a list without referencing the internal storage mechanism of the List class.    
+Iterators are used only to move through a list and should not be combined with any function for adding or removing items from a list.
+
+__Exercises__
+Todo: Return to exercise
+
+## Chapter 4: Stack
+A list-like structure that can be used to solve any problems in computing is the stack. Stack are efficient data structures because data can be added or removed only from the top of a stack, making these procedures fast and easy to implement.
+
+__Stack Operations__  
+A stack is a list of elements that are accessible only from one end of the list  which is called the top. The stack is known as a _last-in, first-out_ (LIFO) data structure.
+The primary operations of a stack are
+* push
+* pop
+* peek  
+
+Other operations includes
+* clear
+
+The stack may also have a _length_ property.   
+
+__Exercises__  
+Todo: Return to exercises  
+
+
+## Chapter 5: Queues  
+A _queue_ is a type of list where data are inserted at the end and are removed from the front. A queue is an example of _first-in, first-out_ (FIFO) data structure.
+
+__Queue Operations__  
+The primary operation involving queues are
+* enqueue
+* dequeue
+* peek
+
+Other operations includes
+* clear  
+
+The queue may also have a _length_ property.
+
+To continue.
+
+## Chapter 12: Sorting Algorithm  
