@@ -118,3 +118,14 @@ The queue may also have a _length_ property.
 To continue.
 
 ## Chapter 12: Sorting Algorithm  
+### Basic Sorting Algorithms
+__Bubble Sort__  
+The bubble sort is one of the slowest sorting algorithm, but it is also one of the easiest sorts to implement.   
+Assuming you are sorting a set of numbers into ascending order, larger values float to the right of the array and lower values float to the left.  
+
+__Selection Sort__    
+This sort works by starting at the beginning of the array and comparing the first element with the remaining elements. After examining all the elements, the smallest element is placed in the first position of the array, and the algorithm moves to the second position.
+
+__Insertion Sort__  
+The insertion sort is analogous to the way humans sort data numerically or alphabetically.   
+In the case of an array of numbers, the insertion sort works by moving larger array elements to the right to make room for the smaller elements on the left side of the array.  
