@@ -9,7 +9,6 @@ public class Exercise11A
 {
     public bool isAllUnique(string str)
     {
-        bool isUnique = true;
         Dictionary<char, int> charOccurance = new Dictionary<char, int>();
         for(int i = 0; i < str.Length; i++)
         {
@@ -20,12 +19,11 @@ public class Exercise11A
             }
             charOccurance[c] += 1; 
             if (charOccurance[c] > 1) {
-                isUnique = false;
-                break;
+               return false;
             }
         }
 
-        return isUnique;
+        return true;
     }
 }
 

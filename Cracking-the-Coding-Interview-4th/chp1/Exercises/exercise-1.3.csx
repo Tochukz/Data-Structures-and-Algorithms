@@ -16,12 +16,12 @@ public class Exercise13
         }
        
         char[] letters = str.ToCharArray();
-        
-        for(int i = 0; i < str.Length; i++)
+
+        for(int i = 0; i < letters.Count(); i++)
         {
-            for (int j = i + 1; j < str.Length; j++)
+            for (int j = i + 1; j < letters.Count() -1; j++)
             {
-                if (str[i] == str[j]) {                    
+                if (letters[i] == str[j]) {                    
                     str = str.Remove(i, 1);
                 }
             }

@@ -7,7 +7,6 @@ public class Exercise11B
 {
     public bool isAllUnique(string str)
     {
-        bool isUnique = true;
         for (int i = 0; i < str.Length; i++)
         {
             for( int j = i + 1; j < str.Length; j++)
@@ -19,7 +18,7 @@ public class Exercise11B
             }
         }
 
-        return isUnique;
+        return true;
     }
 }
 
