@@ -1,4 +1,7 @@
-/* Write a method to decide if two strings are anagrams or not. */
+/**
+ Problem: 
+   Write a method to decide if two strings are anagrams or not. 
+*/
 public class Excerise14
 {
     public static bool isAnagrams(string word, string anagram)
@@ -12,15 +15,14 @@ public class Excerise14
         char[] letters2 = anagram.ToCharArray();
         Array.Sort(letters1);
         Array.Sort(letters2);
-        bool isAnagram = true;
         for(int i = 0; i < letters1.Count(); i++)
         {
             if (letters1[i] != letters2[i]) 
             {
-                isAnagram = false;
+                return false;
             }
         }
-        return isAnagram;
+        return true;
     }
 }
 
