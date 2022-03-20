@@ -66,11 +66,11 @@ stack.Push(4);
 stack.Push(5);
 stack.PrintStack(); // 1 2 3 4 5
 
-int lastElement = stack.Pop(); 
-int secondLast = stack.Peek(); 
-Console.WriteLine($"Last Element: {lastElement}"); // Last Element: 5
-Console.WriteLine($"Second Last: {secondLast}"); // Second Last: 4
-stack.PrintStack(); // 1 2 3 4
+int x = stack.Pop();
+int y = stack.Pop();
+int z = stack.Peek();
+Console.WriteLine("x = {0}, y = {1}, z = {2}", x, y, z); // x = 5, y = 4, z = 3
+stack.PrintStack(); // 1 2 3
 
 /**
  PROS:
