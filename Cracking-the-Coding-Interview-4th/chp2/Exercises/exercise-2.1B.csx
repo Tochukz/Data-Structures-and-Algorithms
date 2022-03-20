@@ -71,7 +71,7 @@ class SinglyLinkedList
                     }
                     else 
                     {
-                       prevNode.Next = currentNode.Next;
+                        prevNode.Next = currentNode.Next;
                     }
                 }
                 else 
