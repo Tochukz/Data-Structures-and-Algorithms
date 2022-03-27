@@ -41,3 +41,11 @@ foreach(KeyValuePair<string, string> pair in pairs)
   string isOrNot = isRotated ? "is a rotation of" : "is NOT a rotation of";
   Console.WriteLine($"{pair.Key} {isOrNot} {pair.Value}");
 }
+
+/**
+ Output: 
+   apple is a rotation of pleap
+   waterbottle is a rotation of erbottlewat
+   camera is NOT a rotation of macera
+
+*/
