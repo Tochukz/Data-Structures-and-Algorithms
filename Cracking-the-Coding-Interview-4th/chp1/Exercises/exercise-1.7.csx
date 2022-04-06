@@ -34,7 +34,7 @@ class Exercise17
                     matrix[i,j] = 0;
                 }
             }
-        }
+        }  
     }
 
     public void MakeZeroLines2(int[,] matrix)

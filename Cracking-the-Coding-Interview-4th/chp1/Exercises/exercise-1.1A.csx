@@ -25,12 +25,30 @@ public class Exercise11A
 
         return true;
     }
+
+    public bool isAllUnique2(string str)
+    {
+        HashSet<char> charOccurance = new HashSet<char>();
+        for(int i = 0; i < str.Length; i++)
+        {
+            char x = str[i];
+            if (charOccurance.Contains(x))
+            {
+                return false;
+            }
+            else 
+            {
+                charOccurance.Add(x);
+            }
+        }
+        return true;
+    }
 }
 
 
 Exercise11A exc1 = new Exercise11A();
-bool unique1 = exc1.isAllUnique("Hippopotamous"); // False
-bool unique2 = exc1.isAllUnique("Kalvin C"); // True
+bool unique1 = exc1.isAllUnique2("Hippopotamous"); // False
+bool unique2 = exc1.isAllUnique2("Kalvin C"); // True
 
 Console.WriteLine(unique1);
 Console.WriteLine(unique2);

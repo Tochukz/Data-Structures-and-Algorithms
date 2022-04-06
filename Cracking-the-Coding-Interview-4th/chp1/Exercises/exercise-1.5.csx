@@ -24,7 +24,7 @@ class Exercise15
         return builder.ToString();
     }
 
-    /** A better solution */
+    /** A better solution. */
     public string ReplaceSpace2(string str)
     {
         char[] charArry1 = str.Trim().ToCharArray();
@@ -41,7 +41,7 @@ class Exercise15
         int j = newLength  - 1;
         for(int i = charArry1.Length - 1; i >= 0; i--)
         {
-            if (charArry1[i] == ' ') // second condition for trim effect 
+            if (charArry1[i] == ' ')
             {
                charArry2[j--] = '0';
                charArry2[j--] = '2';

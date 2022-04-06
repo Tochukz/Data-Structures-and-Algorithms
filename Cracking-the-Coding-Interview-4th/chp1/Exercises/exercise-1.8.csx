@@ -8,7 +8,7 @@ class Exercise18
 {
     public static bool IsSubstringOf(string bigStr, string smallStr)
     {
-        if (bigStr.IndexOf(smallStr) > 1)
+        if (bigStr.IndexOf(smallStr) > -1)
         {
             return true;
         }
