@@ -7,19 +7,13 @@ using System.Collections.Generic;
 
 class Exercise32A 
 {
-    Stack<int> Elements;
+    Stack<int> Elements = new Stack<int>();
 
-    Stack<int> MinElements; 
-
-    public Exercise32A()
-    {
-        Elements = new Stack<int>();
-        MinElements = new Stack<int>();
-    }
+    Stack<int> MinElements  = new Stack<int>();
 
     public void Push(int value)
     {
-       if(value < MinValue)
+       if(value <= MinValue)
        {
            MinElements.Push(value);
        }
@@ -30,7 +24,8 @@ class Exercise32A
     {
         if (Elements.Count == 0)
         {
-            throw new Exception("The main stack is empty!");
+            return -1;
+            // throw new Exception("The main stack is empty!");
         }
         int value = Elements.Pop();
         if (value == MinValue)
@@ -50,11 +45,13 @@ class Exercise32A
             return MinElements.Peek();
         }
     }
+
     public int Min()
     {
-        if (MinElements.Count == 0)
+        if (Elements.Count == 0)
         {
-            throw new Exception("The stack is empty!");
+            return -1
+            // throw new Exception("The stack is empty!");
         }
         return MinElements.Peek();
     }
