@@ -46,9 +46,14 @@ The C# data type for Array List is `List`, i.e `System.Collections.Generic.List`
 __String Buffer__  
 The C# data type for String Buffer is `StringBuilder`, i.e `System.Text.StringBuilder`
 
+__Online Resources__   
+* [C++ string class and its applications](https://www.geeksforgeeks.org/c-string-class-and-its-applications/)
+
 __Online Solutions__   
+* Exercise 1.2  
+[Different methods to reverse a string in C/C++](https://www.geeksforgeeks.org/reverse-a-string-in-c-cpp-different-methods/)
 * Exercise 1.3  
-[Remove Duplicate from a given string](https://www.geeksforgeeks.org/remove-duplicates-from-a-given-string/#_=_)
+[Remove Duplicate from a given string](https://www.geeksforgeeks.org/remove-duplicates-from-a-given-string/)
 * Exercise 1.4  
 [Check whether two strings are anagram of each other](https://www.geeksforgeeks.org/check-whether-two-strings-are-anagram-of-each-other/)
 * Exercise 1.5  
@@ -57,6 +62,14 @@ __Online Solutions__
 [Turn an image by 90 degree](https://www.geeksforgeeks.org/turn-an-image-by-90-degree)
 * Exercise 1.7  
 [A Boolean Matrix Question](https://www.geeksforgeeks.org/a-boolean-matrix-question/)
+
+__Online Exercises__  
+* Exercise 1.4  
+[Anagram](https://practice.geeksforgeeks.org/problems/anagram-1587115620/1)
+* Exercise 1.6  
+[Rotate by 90 degree ](https://practice.geeksforgeeks.org/problems/rotate-by-90-degree-1587115621/1)
+* Exercise 1.7  
+[Boolean Matrix](https://practice.geeksforgeeks.org/problems/boolean-matrix-problem-1587115620/1/)
 
 #### Chapter 2: Linked Lists  
 A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked lists are linked using pointers.  
@@ -74,7 +87,6 @@ __Online Solutions__
 __Other useful question__  
 * [Find the middle of a given linked list](https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/?ref=lbp)
 
-
 #### Chapter 3: Stacks and Queues  
 __Online Implementations__
 * [Stack Data Structure](https://www.geeksforgeeks.org/stack-data-structure-introduction-program/?ref=lbp)  
@@ -91,6 +103,10 @@ __Online Solutions__
 [Program for Tower of Hanoi](https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/)  
 * Exercise 3.5  
 [Queue using Stacks](https://www.geeksforgeeks.org/queue-using-stacks/)
+
+__Online Exercises__  
+* Exercise 3.2  
+ [Get minimum element from stack](https://practice.geeksforgeeks.org/problems/get-minimum-element-from-stack/1/)  
 
 #### Chapter 4: Trees and Graphs  
 ##### Tree  
@@ -158,6 +174,11 @@ The most commonly used representations of a graph are:
 2. Adjacency List
 There are other representations also like _Incidence Matrix_ and _Incidence List_.
 
+__Online Solutions__  
+* Exercise 4.1  
+[How to determine if a binary tree is height-balanced?](https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/)
+
+__Online Resources__  
 [Graph Data Structure And Algorithms](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)  
 [Graph and its representations](https://www.geeksforgeeks.org/graph-and-its-representations/)
 
@@ -168,9 +189,6 @@ There are other representations also like _Incidence Matrix_ and _Incidence List
 * [CareerCup](https://careercup.com/)
 * [Best Developer Assessment Tools - 2022](https://www.selectsoftwarereviews.com/buyer-guide/online-coding-interview-tools)
 
-__Online Solutions__  
-* Exercise 4.1  
-[How to determine if a binary tree is height-balanced?](https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/)
 
 #### Developer Assessment Sites
 * [hackerrank.com](https://www.hackerrank.com/dashboard)
@@ -186,7 +204,7 @@ __Brute Force__
 _Brute force_ is a problem solving technique in which all the possible ways or all the possible solutions to a given problem are enumerated. The best solution is then  chosen.   
 The Brute force approach is often slow and inefficient.  
 __Example__: Implement a SudokuSolver  
-__Resource__ : [Brute Force Approach and its pros and cons](https://www.geeksforgeeks.org/brute-force-approach-and-its-pros-and-cons/)
+__Resource__ : [Brute Force Approach and its pros and cons](https://www.geeksforgeeks.org/brute-force-approach-and-its-pros-and-cons/)  
 
 __Use of Data Structure__  
 _Data Structure_ approach produces an optimal solution by using the correct data structure and then writing a basic driver code which utilizes the data structure. This is an efficient approach.  
@@ -219,4 +237,4 @@ It is a data structure of fixed initial capacity of N and if at any moment it is
 
 __What operations will it support?__
 * get(key)
-* insert(key, value) 
+* insert(key, value)  
