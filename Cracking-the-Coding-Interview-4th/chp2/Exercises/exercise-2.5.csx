@@ -59,6 +59,7 @@ class SingleLinkedList
     }
 
     
+    /* Another problem: Finding the node at the beginning of the loop */
     public Node FindNodeAtLoopBegining()
     {
         if (Head == null)
