@@ -12,20 +12,23 @@ class Node
     }
 }
 
-class BinaryTree
+class BinaryTreeDFS
 {
     public Node Root;
 
-    public BinaryTree()
+    public BinaryTreeDFS()
     {
-        Root = null;
+        
     }
 
-    public BinaryTree(int data)
+    public BinaryTreeDFS(int data)
     {
         Root = new Node(data);
     }
 
+    
+
+    /* PreOrder Traversal */
     public void TraversePreOrder(Node parent)
     {
         if (parent == null)
@@ -37,6 +40,7 @@ class BinaryTree
         TraversePreOrder(parent.Right);
     }
 
+    /* InOrder Traversal */
     public void TraverseInOrder(Node parent)
     {
         if (parent == null)
@@ -48,6 +52,7 @@ class BinaryTree
         TraverseInOrder(parent.Right);
     }
 
+     /*  PostOrder Traversal */
     public void TraversePostOrder(Node parent)
     {
         if (parent == null)
@@ -76,6 +81,8 @@ class BinaryTree
         //Todo: 
         // https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/?ref=lbp
     }
+
+
 }
 
 /**
@@ -84,7 +91,7 @@ class BinaryTree
  4  5
 */
 
-BinaryTree tree = new BinaryTree(1);
+BinaryTreeDFS tree = new BinaryTreeDFS(1);
 tree.Root.Left = new Node(2);
 tree.Root.Right = new Node(3);
 
@@ -93,7 +100,15 @@ tree.Root.Left.Right = new Node(5);
 
 
 tree.TraversePreOrder(tree.Root);  // 1 2 4 5 3 
-Console.WriteLine("\n"); //
+Console.WriteLine("\n"); 
 tree.TraverseInOrder(tree.Root); // 4 2 5 1 3 
 Console.WriteLine("\n");
 tree.TraversePostOrder(tree.Root); // 4 5 2 3 1
+
+/**
+Here I implement the 3 types of Depth-First Traverse for a Binary Tree
+
+Online Resource:  
+  https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder 
+  https://www.geeksforgeeks.org/level-order-tree-traversal/
+*/
