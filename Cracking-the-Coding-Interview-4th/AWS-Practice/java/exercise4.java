@@ -1,3 +1,15 @@
+import java.util.*;
+
+class LinkedListNode {
+  public int data;
+  public LinkedListNode next;
+  public LinkedListNode arbitrary_pointer;
+  LinkedListNode(int d)
+  {
+    data = d;
+  }
+}
+
 class exercise4 {
     public static LinkedListNode deep_copy_arbitrary_pointer(LinkedListNode head) {
         HashMap<LinkedListNode, LinkedListNode> nodeMap = new HashMap<LinkedListNode, LinkedListNode>();

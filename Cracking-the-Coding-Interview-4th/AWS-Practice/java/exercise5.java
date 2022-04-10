@@ -1,3 +1,13 @@
+import java.util.*;
+
+class BinaryTreeNode
+{
+    public int data;
+    
+    public BinaryTreeNode left;
+
+    public BinaryTreeNode right;
+}
 class exercise5 {
     
     private static void treeToHashMap(BinaryTreeNode root, HashMap<Integer, List<BinaryTreeNode>> map, int level)

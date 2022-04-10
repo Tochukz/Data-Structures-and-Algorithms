@@ -1,6 +1,9 @@
+
+import java.util.*;
+
 class exercise2 {
     static boolean findSumOfTwo(int[] numbers, int val) {
-      HashSet<Integer> numberSet = new HashSet();
+      HashSet<Integer> numberSet = new HashSet<Integer>();
       for(Integer x : numbers)
       {   
           numberSet.add(x);
@@ -14,7 +17,7 @@ class exercise2 {
       return false;
     }
 
-    public static void main(string[] args)
+    public static void main(String[] args)
     {
         
     }

@@ -1,4 +1,6 @@
 
+import java.util.*;
+
 class exercise7 {
     public static boolean canSegmentString(String str, Set<String> dictionary) {
       HashSet<String> words = new HashSet<String>();

@@ -1,3 +1,12 @@
+class BinaryTreeNode
+{
+    public int data;
+    
+    public BinaryTreeNode left;
+
+    public BinaryTreeNode right;
+}
+
 class exercise6 {
 
     static boolean isBst(BinaryTreeNode root, int minVal, int maxVal)
