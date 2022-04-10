@@ -63,7 +63,7 @@ __Online Solutions__
 * Exercise 1.7  
 [A Boolean Matrix Question](https://www.geeksforgeeks.org/a-boolean-matrix-question/)
 
-__Online Exercises__  
+__Online Practice__  
 * Exercise 1.4  
 [Anagram](https://practice.geeksforgeeks.org/problems/anagram-1587115620/1)
 * Exercise 1.6  
@@ -104,7 +104,7 @@ __Online Solutions__
 * Exercise 3.5  
 [Queue using Stacks](https://www.geeksforgeeks.org/queue-using-stacks/)
 
-__Online Exercises__  
+__Online Practice__  
 * Exercise 3.2  
  [Get minimum element from stack](https://practice.geeksforgeeks.org/problems/get-minimum-element-from-stack/1/)  
 
@@ -132,6 +132,8 @@ __Tree Traversal__
 Binary Tree Traversal can be:
 A. Depth-First Traversal
 B. Breath-First Traversal (also known as Level Order Traversal)
+
+__Depth-First Traversal__  
 Depth-First Transversal can be done in three ways:
 1. PreOrder Traversal
 2. InOrder Traversal
@@ -152,7 +154,9 @@ __PostOrder Traversal__
 * Traverse the right subtree
 * Visit the root
 
+
 [Tree Traversal](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/?ref=lbp)
+[Level Order Binary Tree Traversal](https://www.geeksforgeeks.org/level-order-tree-traversal/)
 
 ##### Binary Search Tree
 Binary Search Tree is a node-based binary tree data structure which has the following properties:  
@@ -177,10 +181,29 @@ There are other representations also like _Incidence Matrix_ and _Incidence List
 __Online Solutions__  
 * Exercise 4.1  
 [How to determine if a binary tree is height-balanced?](https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/)
+* Exercise 4.2  
+[Find if there is a path between two vertices in a directed graph](https://www.geeksforgeeks.org/find-if-there-is-a-path-between-two-vertices-in-a-given-graph/)
+* Exercise 4.3
+[Sorted Array to Balanced BST](https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/)
 
 __Online Resources__  
 [Graph Data Structure And Algorithms](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)  
 [Graph and its representations](https://www.geeksforgeeks.org/graph-and-its-representations/)
+[Breadth First Search or BFS for a Graph](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
+
+__Online Practice__  
+* Exercise 4.1  
+[Check for Balanced Tree](https://practice.geeksforgeeks.org/problems/check-for-balanced-tree/1/)  
+* Exercise 4.3  
+[Array to BST ](https://practice.geeksforgeeks.org/problems/array-to-bst4443/1/)
+Given a sorted array. Convert it into a Height balanced Binary Search Tree (BST). Find the preorder traversal of height balanced BST. If there exist many such balanced BST consider the tree whose preorder is lexicographically smallest.
+
+* [Level order traversal ](https://practice.geeksforgeeks.org/problems/level-order-traversal/1/)  
+Given a binary tree, find its level order traversal.
+Level order traversal of a tree is breadth-first traversal for the tree.  
+* [DFS of Graph ](https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1/)  
+Given a connected undirected graph. Perform a Depth First Traversal of the graph.
+Note: Use recursive approach to find the DFS traversal of the graph starting from the 0th vertex from left to right according to the graph..
 
 #### Chapter 7: Object Oriented Design   
 
