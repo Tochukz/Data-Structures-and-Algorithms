@@ -1,6 +1,6 @@
 /**
-  Problem: 
-    Given a circular linked list, implement an algorithm which returns node at the beginning of the loop.
+Problem: 
+  Given a circular linked list, implement an algorithm which returns node at the beginning of the loop.
 */
 
 class Node 

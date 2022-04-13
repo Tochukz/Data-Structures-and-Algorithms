@@ -185,6 +185,8 @@ __Online Solutions__
 [Find if there is a path between two vertices in a directed graph](https://www.geeksforgeeks.org/find-if-there-is-a-path-between-two-vertices-in-a-given-graph/)
 * Exercise 4.3
 [Sorted Array to Balanced BST](https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/)
+* Exercise 4.5
+[Inorder Successor in Binary Search Tree](https://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/)
 
 __Online Resources__  
 [Graph Data Structure And Algorithms](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)  
@@ -197,11 +199,15 @@ __Online Practice__
 * Exercise 4.3  
 [Array to BST ](https://practice.geeksforgeeks.org/problems/array-to-bst4443/1/)
 Given a sorted array. Convert it into a Height balanced Binary Search Tree (BST). Find the preorder traversal of height balanced BST. If there exist many such balanced BST consider the tree whose preorder is lexicographically smallest.
-
-* [Level order traversal ](https://practice.geeksforgeeks.org/problems/level-order-traversal/1/)  
+* Exercise 4.5  
+[Inorder Successor in BST](https://practice.geeksforgeeks.org/problems/inorder-successor-in-bst/1/)  
+Given a BST, and a reference to a Node x in the BST. Find the Inorder Successor of the given node in the BST.
+* Additional Exercise A   
+[Level order traversal ](https://practice.geeksforgeeks.org/problems/level-order-traversal/1/)  
 Given a binary tree, find its level order traversal.
 Level order traversal of a tree is breadth-first traversal for the tree.  
-* [DFS of Graph ](https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1/)  
+* Additional Exercise B  
+[DFS of Graph ](https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1/)  
 Given a connected undirected graph. Perform a Depth First Traversal of the graph.
 Note: Use recursive approach to find the DFS traversal of the graph starting from the 0th vertex from left to right according to the graph..
 
