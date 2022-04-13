@@ -255,6 +255,43 @@ Divide-and-conquer is a problem solving technique where you divide the problem i
 __Example__: Implement a method that combines 2 sorted arrays. Use the method to sort a given array.  
 __Resource__ : [Divide and Conquer Algorithm](https://www.geeksforgeeks.org/divide-and-conquer-algorithm-introduction/)  
 
+#### Chapter 9: Sorting and Searching
+  Algorithm    | Time Complexity
+---------------|----------------
+Bubble Sort    |    O(n^2)
+Selection Sort |    O(n^2)
+Merge Sort     |  O(nlog(n))
+Quick Sort     |    O(n^2)
+Bucket Sort    |    O(n^2)
+
+__Stability in Sorting algorithms__  
+A sorting algorithms said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input array to be sorted.  
+
+__Which sorting algorithms are stable?__
+Bubble sort, Insertion Sort, Merge Sort, Count Sort etc.
+
+__Which sorting algorithms are unstable__  
+Quick Sort, Heap Sort etc.  
+
+##### Sorting Algorithms
+__Bubble Sort__  
+Bubble sort takes minimum time O(n) when elements are already sorted.  
+
+__Selection Sort__  
+The default implementation of selection sort is not stable.   
+The good thing about selection sort is it never makes more than O(n) swaps and can be useful when memory write is a costly operation.
+
+__Online Resources__  
+[Sorting Algorithms](https://www.geeksforgeeks.org/sorting-algorithms/)  
+
+__Online Practice__  
+* Additional Exercise A  
+[Punish the Students](https://practice.geeksforgeeks.org/problems/punish-the-students5726/1/)
+* Additional Exercise B  
+[Selection Sort ](https://practice.geeksforgeeks.org/problems/selection-sort/1/#)
+
+
+
 #### Examples
 ##### LRU Cache
 __Problem Statement__  
