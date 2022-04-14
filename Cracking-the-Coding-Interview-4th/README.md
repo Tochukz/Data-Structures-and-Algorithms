@@ -281,15 +281,34 @@ __Selection Sort__
 The default implementation of selection sort is not stable.   
 The good thing about selection sort is it never makes more than O(n) swaps and can be useful when memory write is a costly operation.
 
+__Merge Sort__  
+Merge Sort is a _Divide and Conquer_ algorithm It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.  
+
+__Quick Sort__  
+The default implementation of Quick Sort is not stable.
+
 __Online Resources__  
 [Sorting Algorithms](https://www.geeksforgeeks.org/sorting-algorithms/)  
+[Bubble Sort](https://www.geeksforgeeks.org/bubble-sort/)  
+[Selection Sort](https://www.geeksforgeeks.org/selection-sort/)  
+[Merge Sort](https://www.geeksforgeeks.org/merge-sort/)  
+[Quick Sort](https://www.geeksforgeeks.org/quick-sort/)    
+
+__Online Solutions__  
+* Exercise 1  
+[Sorted merge in one array](https://www.geeksforgeeks.org/sorted-merge-one-array/)  
+* Exercise 2  
+[Given a sequence of words, print all anagrams together](https://www.geeksforgeeks.org/given-a-sequence-of-words-print-all-anagrams-together/)
 
 __Online Practice__  
+* Exercise 2  
+[Print Anagrams Together](https://practice.geeksforgeeks.org/problems/print-anagrams-together/1)
 * Additional Exercise A  
 [Punish the Students](https://practice.geeksforgeeks.org/problems/punish-the-students5726/1/)
 * Additional Exercise B  
 [Selection Sort ](https://practice.geeksforgeeks.org/problems/selection-sort/1/#)
-
+* Additional Exercise C  
+[Merge Sort ](https://practice.geeksforgeeks.org/problems/merge-sort/1/)
 
 
 #### Examples
