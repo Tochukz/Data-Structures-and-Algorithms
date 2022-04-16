@@ -4,7 +4,7 @@ __By Gayle Laakmann__
 [Code Examples](https://www.careercup.com/careercup_book_solutions)
 
 __My Code Examples__  
-The original examples in the book was written in Java. I have adapted my own examples for C# and compiled it using the `csi.exe`  
+The original examples in the book was written in Java. I have adapted my own examples for C# and compiled them using the `csi.exe`  
 
 __Using csi to compile C#__  
 You can use `csi.exe` to interpret C# script file
@@ -16,13 +16,13 @@ You can use `csi.exe` to interpret C# script file
  ```
  > "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Roslyn\csi" myscript.csx
  ```
- * You can also add the `csi.exe` to your path to make the `csi` command available every where so that you can simple do.  
+ * You can also add the `csi.exe` to your path to make the `csi` command available every where so that you can simple do:  
  ```
  >  csi myscript.csx
  ```  
 
  __Why use csi__  
- csi will allow you to write top level statment outside of a class method. For example, the following code can be written outside of a class method.
+ csi will allow you to write top level statement outside of a class method. For example, the following code can be written outside of a class method.
  ```
  Dictionary<int, Student> studentMap = physicsClass.BuildStudents(students);
  foreach(KeyValuePair<int, Student> keyVal in studentMap)
@@ -31,6 +31,14 @@ You can use `csi.exe` to interpret C# script file
  }
 
  ```
+
+
+ __Java Examples__  
+ You can run the Java examples by installing JDK and using the `java` command on you `.java` files.  
+ ```
+> java Example.java
+ ```
+
 ____
 ## Interview Questions
 ### Part 1: Data Structures
@@ -59,7 +67,8 @@ __Online Solutions__
 * Exercise 1.5  
 [URLify a given string](https://www.geeksforgeeks.org/urlify-a-given-string-replace-spaces-with-%20/)  
 * Exercise 1.6  
-[Turn an image by 90 degree](https://www.geeksforgeeks.org/turn-an-image-by-90-degree)
+[Turn an image by 90 degree](https://www.geeksforgeeks.org/turn-an-image-by-90-degree)  
+[Inplace rotate square matrix by 90 degrees](https://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/)
 * Exercise 1.7  
 [A Boolean Matrix Question](https://www.geeksforgeeks.org/a-boolean-matrix-question/)
 
@@ -274,6 +283,7 @@ __Which sorting algorithms are unstable__
 Quick Sort, Heap Sort etc.  
 
 ##### Sorting Algorithms
+##### Sorting
 __Bubble Sort__  
 Bubble sort takes minimum time O(n) when elements are already sorted.  
 
@@ -287,12 +297,22 @@ Merge Sort is a _Divide and Conquer_ algorithm It divides the input array into t
 __Quick Sort__  
 The default implementation of Quick Sort is not stable.
 
+__Bucket Sort__  
+
+##### Searching
+__Binary Search__  
+Binary Search is a `searching algorithm` used in a sorted array by repeatedly dividing the search interval in half. The idea of
+binary search is to use the information that the array is sorted and reduce the time complexity to _O(Logn)_.      
+Binary search algorithm falls under the _Decrease and Conquer_ paradigm.  
+
 __Online Resources__  
 [Sorting Algorithms](https://www.geeksforgeeks.org/sorting-algorithms/)  
 [Bubble Sort](https://www.geeksforgeeks.org/bubble-sort/)  
 [Selection Sort](https://www.geeksforgeeks.org/selection-sort/)  
 [Merge Sort](https://www.geeksforgeeks.org/merge-sort/)  
 [Quick Sort](https://www.geeksforgeeks.org/quick-sort/)    
+[Searching Algorithms](https://www.geeksforgeeks.org/searching-algorithms/)  
+[Binary Search](https://www.geeksforgeeks.org/binary-search/)
 
 __Online Solutions__  
 * Exercise 1  
@@ -308,7 +328,9 @@ __Online Practice__
 * Additional Exercise B  
 [Selection Sort ](https://practice.geeksforgeeks.org/problems/selection-sort/1/#)
 * Additional Exercise C  
-[Merge Sort ](https://practice.geeksforgeeks.org/problems/merge-sort/1/)
+[Merge Sort ](https://practice.geeksforgeeks.org/problems/merge-sort/1/)  
+* Addition Exercise D  
+[Binary Search ](https://practice.geeksforgeeks.org/problems/binary-search/1#)
 
 
 #### Examples

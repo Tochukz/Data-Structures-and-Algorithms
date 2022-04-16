@@ -30,7 +30,7 @@ class BinaryTreeBFS1
     public void TraverseLevelOrder()
     {
        int height = Height(Root);
-       for(int i = 1; i <=height; i++)
+       for(int i = 1; i <= height; i++)
        {
            PrintLevel(Root, i);
        }
@@ -44,6 +44,7 @@ class BinaryTreeBFS1
         }
         return 1 + Math.Max(Height(root.Left), Height(root.Right));
     }
+    
     public void PrintLevel(Node root, int level)
     {
         if (root == null)
@@ -86,7 +87,7 @@ TraverseLevelOrder |     O(n^2)       |    O(n)  for skewed tree, O(Log n) for b
 PrintLevel          |      O(n)        |    O(n)  for skewed tree, O(Log n) for balanced tree 
 
 Here I implement the Breadth-first(level-order) traversal for a binary tree using recusive function call. 
-This is not the best approach. Using a Queue is much better. See BinaryTree3.csx
+This is not the best approach. Using a Queue is much better. See BinaryTree-BFS.csx
  
  Output: 
    1 2 3 4 5 6 7 

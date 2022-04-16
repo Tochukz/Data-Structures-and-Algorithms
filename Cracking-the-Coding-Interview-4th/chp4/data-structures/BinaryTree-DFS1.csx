@@ -12,21 +12,19 @@ class Node
     }
 }
 
-class BinaryTreeDFS
+class BinaryTreeDFS1
 {
     public Node Root;
 
-    public BinaryTreeDFS()
+    public BinaryTreeDFS1()
     {
         
     }
 
-    public BinaryTreeDFS(int data)
+    public BinaryTreeDFS1(int data)
     {
         Root = new Node(data);
     }
-
-    
 
     /* PreOrder Traversal */
     public void TraversePreOrder(Node parent)
@@ -64,25 +62,6 @@ class BinaryTreeDFS
         Console.Write($"{parent.Data} ");
     }
 
-    /**
-    * Traverse without recursion
-    */
-    public void TraverseInOrder2()
-    {
-      //Todo: 
-      // https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/?ref=lbp
-    }
-
-    /**
-    * Traverse without recurion and without stack
-    */
-    public void TraverseInOrder3()
-    {
-        //Todo: 
-        // https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/?ref=lbp
-    }
-
-
 }
 
 /**
@@ -91,7 +70,7 @@ class BinaryTreeDFS
  4  5
 */
 
-BinaryTreeDFS tree = new BinaryTreeDFS(1);
+BinaryTreeDFS1 tree = new BinaryTreeDFS1(1);
 tree.Root.Left = new Node(2);
 tree.Root.Right = new Node(3);
 
@@ -106,7 +85,7 @@ Console.WriteLine("\n");
 tree.TraversePostOrder(tree.Root); // 4 5 2 3 1
 
 /**
-Here I implement the 3 types of Depth-First Traverse for a Binary Tree
+Here I implement the 3 types of Depth-First Traverse for a Binary Tree using recursion
 
 Online Resource:  
   https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder 

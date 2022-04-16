@@ -78,7 +78,7 @@ tree.TraverseLevelOrder();
  Method             | Time Complexity | Space Complexity  
 TraverseLevelOrder  |     O(n)        |      O(n)
  
-Here I implement the Breadth-first(level-order) traversal for a binary tree
+Here I implement the Breadth-first(level-order) traversal for a binary tree using a Queue
 
  Output: 
    1 2 3 4 5 6 7
