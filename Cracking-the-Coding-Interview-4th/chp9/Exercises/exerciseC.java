@@ -8,7 +8,7 @@ Your Task:
   Your task is to complete the function merge() which takes arr[], l, m, r as its input parameters and modifies arr[] in-place such that it is sorted from position l to position r, and function mergeSort() which uses merge() to sort the array in ascending order using merge sort algorithm.
 */
 
-class exerciseC
+class ExerciseC
 {
     void merge(int arr[], int start, int mid, int end)
     {
@@ -72,14 +72,39 @@ class exerciseC
             merge(arr, start, mid, end);
         }
     }
+
+    void printArray(int[] numbers)
+    {
+        for(int x : numbers)
+        {
+            System.out.print(x + " ");
+        }
+        System.out.print("\n");
+    }
+
+    public static void main(String[] args)
+    {
+        ExerciseC exerC =  new ExerciseC();
+        int[] numbers = {7, 2, 8, 12, 10, 6, 5, 2, 9, 3, 4, 1, 7, 21};
+        System.out.println("Before Sorting: ");
+        exerC.printArray(numbers);
+        exerC.mergeSort(numbers, 0, numbers.length -1);
+        System.out.println("After Sorting: ");
+        exerC.printArray(numbers);
+    }
 }
 
 
 /**
- 
 NB: This solution works but it is not optimal enough. 
-    In the online coding platform, the cases were not completed in the alloted time. 
+    In the online coding platform, the cases were not completed in the alloted time. i.e: Time Limit Exceeded
 
+Output:  
+  Before Sorting: 
+  7 2 8 12 10 6 5 2 9 3 4 1 7 21 
+  After Sorting:
+  1 2 2 3 4 5 6 7 7 8 9 10 12 21
+  
 Online Resource: 
   https://practice.geeksforgeeks.org/problems/merge-sort/1/
 */

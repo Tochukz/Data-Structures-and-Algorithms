@@ -9,8 +9,8 @@ Expected Time Complexity: O(N2)
 Expected Auxiliary Space: O(1)
 */
 
-public class exerciseB {
-    int  select(int arr[], int i)
+public class ExerciseB {
+    int select(int arr[], int i)
 	{
         int n = arr.length;
         int minIndex = i;
@@ -52,4 +52,35 @@ public class exerciseB {
 	        arr[minIndex] = temp; 
 	    }
 	}
+
+	void printArray(int[] numbers)
+	{
+        for(int x : numbers)
+	    {
+		    System.out.print(x + " ");
+	    }
+	    System.out.print("\n");
+	}
+
+	public static void main(String[] args)
+	{
+		ExerciseB exerB = new ExerciseB(); 
+        int[] numbers1 = {7, 2, 8, 12, 10, 6, 5, 2, 9, 3, 4, 1, 7, 21};
+		System.out.println("Before Sorting: ");
+	    exerB.printArray(numbers1);
+		exerB.selectionSort(numbers1, numbers1.length);
+		System.out.println("After Sorting: ");
+		exerB.printArray(numbers1);
+	}
 }
+
+/**
+Output: 
+  Before Sorting: 
+  7 2 8 12 10 6 5 2 9 3 4 1 7 21 
+  After Sorting:
+  1 2 2 3 4 5 6 7 7 8 9 10 12 21
+
+Online Resources: 
+  https://practice.geeksforgeeks.org/problems/selection-sort/1/#
+*/

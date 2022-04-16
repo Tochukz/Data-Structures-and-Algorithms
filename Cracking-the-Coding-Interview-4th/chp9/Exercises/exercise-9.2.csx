@@ -2,6 +2,7 @@
 Problem: Write a method to sort an array of strings so that all the anagrams are next to each other.
  
 */
+
 class Exercise92 
 {
     private static bool AreAnagrams(string word1, string word2)
@@ -53,7 +54,6 @@ Exercise92.PrintArray(names);
 
 Output: 
   apple papel carrot tarroc duck cudk ele lee eel banana 
-
 
 Online Resource: 
   https://www.geeksforgeeks.org/given-a-sequence-of-words-print-all-anagrams-together/
