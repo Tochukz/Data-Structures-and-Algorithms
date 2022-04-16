@@ -34,6 +34,30 @@ public class Exercise13
        }
        return string.Join("", str.Take(index));
     }
+   
+    
+    /** This solution is my choice solution. It removes the duplicate in the char[] in place. */
+    public void RemoveDuplicates2(ref char[] strChars)
+    {
+        int index = 0;
+        for(int i = 0; i < strChars.Length; i++)
+        {
+            int j;
+            for(j = 0; j < strChars.Length; j++)
+            {
+                if (strChars[i] == strChars[j])
+                {
+                    break;
+                }
+            }
+            if (i == j)
+            {
+                strChars[index] = strChars[i];
+                index++;   
+            } 
+        }
+        Array.Resize(ref strChars, index);
+    } 
 
     /**
      * This solution does NOT address the contraints outlined in the question but is another way to remove duplicates in a string
@@ -50,29 +74,30 @@ public class Exercise13
         {
             set.Add(x);
         }
-        char[] uniques = new char[set.Count];
-        int i = 0;
-        foreach(char y in set)
-        {
-            uniques[i++] = y;
-        }
-        return string.Join("", uniques);
+        return string.Join("", set);
     }
 }
 
 Exercise13 exer = new Exercise13();
-string animal1 = "hippopotamus";
-string animal2 = "geeksforgeeks"; 
-char[] animalChars1 = animal1.ToCharArray();
-char[] animalChars2 = animal2.ToCharArray();
+string hippo = "hippopotamus";
+string geeks = "geeksforgeeks"; 
+char[] hippoChars = hippo.ToCharArray();
+char[] geeksChars = geeks.ToCharArray();
 
-string animalA  = exer.RemoveDuplicates(animalChars1);
-string animalB  = exer.RemoveDuplicates(animalChars2);
-Console.WriteLine("{0} {1}", animalA, animalB); // hipotamus geksfor
+string uniqueHippo  = exer.RemoveDuplicates(hippoChars);
+string uniqueGeeks  = exer.RemoveDuplicates(geeksChars);
+Console.WriteLine("{0} {1}", uniqueHippo, uniqueGeeks); // hipotamus geksfor
 
-string animalC  = exer.RemoveDupUsingSet(animalChars1);
-string animalD  = exer.RemoveDupUsingSet(animalChars2);
-Console.WriteLine("{0} {1}", animalC, animalD); // hipotamus geksfor
+string uniqueHippo1  = exer.RemoveDupUsingSet(hippoChars);
+string uniqueGeeks1  = exer.RemoveDupUsingSet(geeksChars);
+Console.WriteLine("{0} {1}", uniqueHippo1, uniqueGeeks1); // hipotamus geksfor
+
+
+char[] hippoChars1 = hippo.ToCharArray();
+char[] geeksChars1 = geeks.ToCharArray();
+exer.RemoveDuplicates2(ref hippoChars1);
+exer.RemoveDuplicates2(ref geeksChars1);
+Console.WriteLine("{0} {1}", string.Join("", hippoChars1), string.Join("", geeksChars1)); // hipotamus geksfor
 
 /**
   Method            | Time Complexity  | Space Complexity

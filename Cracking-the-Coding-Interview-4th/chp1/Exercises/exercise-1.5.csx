@@ -56,6 +56,35 @@ class Exercise15
         return string.Join("", charArry2);
     }
 
+    /* This solution takes the str as char[] and replaces the space in-place */
+    public void ReplaceSpaces(ref char[] strChars)
+    {
+        int oldLen = strChars.Length;
+        int newLen  = oldLen;
+        foreach(char x in strChars)
+        {
+            if (x == ' ')
+            {
+                newLen += 2;
+            }
+        }
+        Array.Resize(ref strChars, newLen);
+        int j = newLen - 1;
+        for(int i = oldLen - 1; i >=0 ; i--)
+        {
+            if (strChars[i] == ' ')
+            {
+               strChars[j--] = '0';
+               strChars[j--] = '2';
+               strChars[j--] = '%';
+            }
+            else
+            {
+               strChars[j--] = strChars[i];
+            }
+        }
+    }
+
     /** Using built-in native Replace method. Likely not to be allowed in tests */
     public string ReplaceSpaces3(string str)
     {
@@ -72,11 +101,16 @@ Console.WriteLine(exer.ReplaceSpaces(str)); // Mr%20John%20Smith
 Console.WriteLine(exer.ReplaceSpace2(str)); // Mr%20John%20Smith 
 Console.WriteLine(exer.ReplaceSpaces3(str)); // Mr%20John%20Smith
 
+char[] strChars = str.ToCharArray();
+Console.WriteLine(string.Join("", strChars)); // Mr John Smith
+exer.ReplaceSpaces(ref strChars);
+Console.WriteLine(string.Join("", strChars)); // Mr%20John%20Smith%20
+
 /**
 
 Method         | Time Complexity | Space Complexity
-ReplaceSpaces  | O(n)            | O(1)
-ReplaceSpace2  | O(n Log n)      | O(n Log n);
+ReplaceSpaces  |    O(n)         | O(1)
+ReplaceSpace2  |  O(n Log n)     | O(n Log n);
 
 Online Resource 
   https://www.geeksforgeeks.org/urlify-a-given-string-replace-spaces-with-%20/

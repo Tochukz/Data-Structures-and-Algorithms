@@ -4,8 +4,7 @@
     Can you do this in place?
 */
 
-
-class Exercise16
+class Exercise16A
 {
     public int[,] RotateRight(int[,] matrix)
     {
@@ -73,16 +72,6 @@ class Exercise16
         return flippedMatrix;
     }
     
-    public void RotateRightInplace()
-    {
-      //Todo: Implement 
-    }
-
-    public void RotateLeftInplace()
-    {
-      //Todo: Implmenet
-    }
-    
     public void PrintMatrix(int[,] matrix)
     {
         for(int i = 0;  i < matrix.GetLength(0); i++)
@@ -103,7 +92,7 @@ class Exercise16
 }
 
 
-Exercise16 exer = new Exercise16();
+Exercise16A exer = new Exercise16A();
 int[,] matrix = {
     {1,    2,    3,    4},    
     {5,    6,    7,    8,},
@@ -124,33 +113,36 @@ int[,] transformed180 = exer.Flip180(matrix);
 Console.WriteLine("Matrix 1 180 Deg rotate:");
 exer.PrintMatrix(transformed180);
 
-/** Output 
-
-Matrix 1:
-1   2   3   4   
-5   6   7   8   
-9   10  11  12
-Matrix 1 90 Deg right rotate:
-9   5   1
-10  6   2
-11  7   3
-12  8   4
-Matrix 1 90 Deg left rotate:
-4   8   12
-3   7   11
-2   6   10
-1   5   9
-Matrix 1 180 Deg rotate:
-9   10  11  12
-5   6   7   8
-1   2   3   4
-
-*/
-
 /** 
+The solution using an auxillary space of O(n). 
+The solution supports the rotation of non-square matrix. 
+
+To handle the rotation of a square matrix in-place, see exercise-1.6B
+
+Output:
+  Matrix 1:
+  1   2   3   4   
+  5   6   7   8   
+  9   10  11  12
+  Matrix 1 90 Deg right rotate:
+  9   5   1
+  10  6   2
+  11  7   3
+  12  8   4
+  Matrix 1 90 Deg left rotate:
+  4   8   12
+  3   7   11
+  2   6   10
+  1   5   9
+  Matrix 1 180 Deg rotate:
+  9   10  11  12
+  5   6   7   8
+  1   2   3   4
+
 Online Resourse: 
   https://www.geeksforgeeks.org/turn-an-image-by-90-degree/  
   https://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/
+  https://www.geeksforgeeks.org/rotate-matrix-90-degree-without-using-extra-space-set-2/
   https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/?ref=rp
   https://www.geeksforgeeks.org/rotate-a-matrix-clockwise-by-90-degree-without-using-any-extra-space-set-3/?ref=rp
 */
