@@ -4,7 +4,7 @@
    The sum list is a linked list representation of the addition of two input numbers from the last.
  */
 
-public class ExerciseB 
+public class Exercise2B 
 {
     static Node addTwoLists(Node first, Node second) 
     {

@@ -6,7 +6,7 @@ Expected Time Complexity: O(N).
 Expected Auxiliary Space: O(1).
  */
 
-public class ExerciseA
+public class Exercise2A
 {
     Node reverseList(Node head)
     {

@@ -42,7 +42,7 @@ You can use `csi.exe` to interpret C# script file
 ____
 ## Interview Questions
 ### Part 1: Data Structures
-#### Chapter 1: Arrays and Strings
+### Chapter 1: Arrays and Strings
 __Hash Table__   
 A HashTable stores key-value pairs.   
 The C# data type for Hash Table is the `Dictionary`, i.e `System.Collections.Generic.Dictionary`.  
@@ -80,7 +80,7 @@ __Online Practice__
 * Exercise 1.7  
 [Boolean Matrix](https://practice.geeksforgeeks.org/problems/boolean-matrix-problem-1587115620/1/)
 
-#### Chapter 2: Linked Lists  
+### Chapter 2: Linked Lists  
 A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked lists are linked using pointers.  
 In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.  
 A linked list is typically represented by the head of it.
@@ -88,7 +88,7 @@ A linked list is typically represented by the head of it.
 [Linked List MCQ](https://www.geeksforgeeks.org/data-structure-gq/linked-list-gq/)
 
 __Online Solutions__    
-* Exercise 2.1
+* Exercise 2.1  
 [Remove duplicates from an unsorted linked list](https://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/)  
 * Exercise 2.2  
 [Program for n’th node from the end of a Linked List](https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/)  
@@ -96,11 +96,11 @@ __Online Solutions__
 [Given only a pointer/reference to a node to be deleted in a singly linked list, how do you delete it?](https://www.geeksforgeeks.org/given-only-a-pointer-to-a-node-to-be-deleted-in-a-singly-linked-list-how-do-you-delete-it/)  
 * Exercise 2.5  
 [Find first node of loop in a linked list](https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/)
-* Exercise A   
+* Exercise 2A   
 [Reverse a linked list](https://www.geeksforgeeks.org/reverse-a-linked-list/)  
-* Exercise B (Similar to Exercise 2.4)    
+* Exercise 2B (Similar to Exercise 2.4)    
 [Add two numbers represented by linked lists](https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-lists/)  
-* Exercise C   
+* Exercise 2C   
 [Detect loop in a linked list](https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/)
 
 __Online Practice__  
@@ -110,17 +110,17 @@ __Online Practice__
 [Nth node from end of linked list](https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1/)  
 * Exercise 2.3   
 [Delete without head pointer](https://practice.geeksforgeeks.org/problems/delete-without-head-pointer/1/)
-* Exercise A  
+* Exercise 2A  
 [Reverse a linked list](https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/1/)
-* Exercise B  
+* Exercise 2B  
 [Add two numbers represented by linked lists](https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1)    
-* Exercise C   
+* Exercise 2C   
 [Detect Loop in linked list](https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1#)
 
 __Other useful question__  
 * [Find the middle of a given linked list](https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/?ref=lbp)
 
-#### Chapter 3: Stacks and Queues  
+### Chapter 3: Stacks and Queues  
 __Online Implementations__
 * [Stack Data Structure](https://www.geeksforgeeks.org/stack-data-structure-introduction-program/?ref=lbp)  
 * [Queue - Array Implementation](https://www.geeksforgeeks.org/queue-set-1introduction-and-array-implementation/?ref=lbp)  
@@ -141,7 +141,7 @@ __Online Practice__
 * Exercise 3.2  
  [Get minimum element from stack](https://practice.geeksforgeeks.org/problems/get-minimum-element-from-stack/1/)  
 
-#### Chapter 4: Trees and Graphs  
+### Chapter 4: Trees and Graphs  
 ##### Tree  
 Trees provide moderate access/search which is quicker than Linked List and slower than arrays.
 Trees provide moderate insertion/deletion which is quicker than Arrays and slower than Unorders Liked Lists.  
@@ -216,9 +216,9 @@ __Online Solutions__
 [How to determine if a binary tree is height-balanced?](https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/)
 * Exercise 4.2  
 [Find if there is a path between two vertices in a directed graph](https://www.geeksforgeeks.org/find-if-there-is-a-path-between-two-vertices-in-a-given-graph/)
-* Exercise 4.3
+* Exercise 4.3  
 [Sorted Array to Balanced BST](https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/)
-* Exercise 4.5
+* Exercise 4.5  
 [Inorder Successor in Binary Search Tree](https://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/)
 
 __Online Resources__  
@@ -244,7 +244,7 @@ Level order traversal of a tree is breadth-first traversal for the tree.
 Given a connected undirected graph. Perform a Depth First Traversal of the graph.
 Note: Use recursive approach to find the DFS traversal of the graph starting from the 0th vertex from left to right according to the graph..
 
-#### Chapter 7: Object Oriented Design   
+### Chapter 7: Object Oriented Design   
 
 #### Resources
 * [Geeks4Geeks](https://www.geeksforgeeks.org/)  
@@ -288,7 +288,7 @@ Divide-and-conquer is a problem solving technique where you divide the problem i
 __Example__: Implement a method that combines 2 sorted arrays. Use the method to sort a given array.  
 __Resource__ : [Divide and Conquer Algorithm](https://www.geeksforgeeks.org/divide-and-conquer-algorithm-introduction/)  
 
-#### Chapter 9: Sorting and Searching
+### Chapter 9: Sorting and Searching
   Algorithm    | Time Complexity
 ---------------|----------------
 Bubble Sort    |    O(n^2)
@@ -339,21 +339,21 @@ __Online Resources__
 [Binary Search](https://www.geeksforgeeks.org/binary-search/)
 
 __Online Solutions__  
-* Exercise 1  
+* Exercise 9.1  
 [Sorted merge in one array](https://www.geeksforgeeks.org/sorted-merge-one-array/)  
-* Exercise 2  
+* Exercise 9.2  
 [Given a sequence of words, print all anagrams together](https://www.geeksforgeeks.org/given-a-sequence-of-words-print-all-anagrams-together/)
 
 __Online Practice__  
-* Exercise 2  
+* Exercise 9.2  
 [Print Anagrams Together](https://practice.geeksforgeeks.org/problems/print-anagrams-together/1)
-* Additional Exercise A  
+* Exercise 9A  
 [Punish the Students](https://practice.geeksforgeeks.org/problems/punish-the-students5726/1/)
-* Additional Exercise B  
+* Exercise 9B  
 [Selection Sort ](https://practice.geeksforgeeks.org/problems/selection-sort/1/#)
-* Additional Exercise C  
+* Exercise 9C  
 [Merge Sort ](https://practice.geeksforgeeks.org/problems/merge-sort/1/)  
-* Addition Exercise D  
+* Exercise 9D  
 [Binary Search ](https://practice.geeksforgeeks.org/problems/binary-search/1#)
 
 

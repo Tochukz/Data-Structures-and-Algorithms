@@ -4,7 +4,7 @@
    Linked list can contain self loop.
  */
 
-class ExerciseC 
+class Exercise2C 
 {
     //Function to check if the linked list has a loop.
     public static boolean detectLoop(Node head)
