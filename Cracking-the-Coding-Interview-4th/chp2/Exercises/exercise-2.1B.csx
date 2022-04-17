@@ -84,8 +84,12 @@ class SinglyLinkedList
         }
     }
 }
-
 SinglyLinkedList linkedList = new SinglyLinkedList(new int[]{ 1, 7, 2, 3, 3, 5, 1, 7, 7});
 linkedList.PrintList(); // 1 7 2 3 3 5 1 7 7
 linkedList.RemoveDuplicate();
 linkedList.PrintList(); // 1 7 2 3 5
+
+/**
+  Method        |  Time Complexity | Space Complexity 
+RemoveDuplicate |     O(n^2)       |    O(1)
+*/

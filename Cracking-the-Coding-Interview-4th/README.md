@@ -88,10 +88,34 @@ A linked list is typically represented by the head of it.
 [Linked List MCQ](https://www.geeksforgeeks.org/data-structure-gq/linked-list-gq/)
 
 __Online Solutions__    
+* Exercise 2.1
+[Remove duplicates from an unsorted linked list](https://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/)  
 * Exercise 2.2  
 [Program for n’th node from the end of a Linked List](https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/)  
+* Exercise 2.3   
+[Given only a pointer/reference to a node to be deleted in a singly linked list, how do you delete it?](https://www.geeksforgeeks.org/given-only-a-pointer-to-a-node-to-be-deleted-in-a-singly-linked-list-how-do-you-delete-it/)  
 * Exercise 2.5  
 [Find first node of loop in a linked list](https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/)
+* Exercise A   
+[Reverse a linked list](https://www.geeksforgeeks.org/reverse-a-linked-list/)  
+* Exercise B (Similar to Exercise 2.4)    
+[Add two numbers represented by linked lists](https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-lists/)  
+* Exercise C   
+[Detect loop in a linked list](https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/)
+
+__Online Practice__  
+* Exercise 2.1   
+[Remove duplicates from an unsorted linked list](https://practice.geeksforgeeks.org/problems/remove-duplicates-from-an-unsorted-linked-list/1/)  
+* Exercise 2.2  
+[Nth node from end of linked list](https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1/)  
+* Exercise 2.3   
+[Delete without head pointer](https://practice.geeksforgeeks.org/problems/delete-without-head-pointer/1/)
+* Exercise A  
+[Reverse a linked list](https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/1/)
+* Exercise B  
+[Add two numbers represented by linked lists](https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1)    
+* Exercise C   
+[Detect Loop in linked list](https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1#)
 
 __Other useful question__  
 * [Find the middle of a given linked list](https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/?ref=lbp)

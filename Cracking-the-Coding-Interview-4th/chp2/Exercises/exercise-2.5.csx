@@ -69,7 +69,7 @@ class SingleLinkedList
         Node slowNode = Head;
         Node fastNode = Head;
 
-        while(fastNode != null && fastNode.Next != null)
+        while(slowNode != null && fastNode != null && fastNode.Next != null)
         {
             slowNode = slowNode.Next;
             fastNode = fastNode.Next.Next;

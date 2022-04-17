@@ -56,12 +56,12 @@ class SinglyLinkedList
         {
             throw new Exception("The linked list is empty");
         }
-        Dictionary<int, Node> hashTable = new Dictionary<int, Node>();
+        HashSet<int> set = new HashSet<int>();
         Node prev = null;
         Node current = Head;
         while (current != null)
         {   
-            if (hashTable.ContainsKey(current.Data))
+            if (set.Contains(current.Data))
             {
                 if (prev != null)
                 {
@@ -70,7 +70,7 @@ class SinglyLinkedList
             }
             else 
             {
-                hashTable.Add(current.Data, current);
+                set.Add(current.Data);
                 prev = current;
             }
             current = current.Next;
@@ -82,3 +82,8 @@ SinglyLinkedList linkedList = new SinglyLinkedList(new int[]{ 1, 7, 2, 3, 3, 5, 
 linkedList.PrintList(); // 1 7 2 3 3 5 1 7 7
 linkedList.RemoveDuplicate();
 linkedList.PrintList(); // 1 7 2 3 5
+
+/**
+  Method        |  Time Complexity | Space Complexity 
+RemoveDuplicate |     O(n)       |    O(n)
+*/

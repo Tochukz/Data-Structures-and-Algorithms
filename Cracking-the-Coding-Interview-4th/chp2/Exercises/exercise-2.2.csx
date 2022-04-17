@@ -35,33 +35,32 @@ class SinglyLinkedList
         }
     }
 
-    public Node FindNthToLast(int x)
+    public int FindNthToLast(int n)
     {
         if (Head == null)
         {
             throw new Exception("The linked list is empty");
         }
-        int listLength = 0;
+        int listLen = 0;
         Node current = Head;
         while(current != null)
         {
-            listLength++;
+            listLen++;
             current = current.Next;
         }
-        // Console.WriteLine($"List length: {listLength}");
 
-        if (x > listLength)
+        if (n > listLen)
         {
-            throw new Exception($"x is greater then list length {listLength}");
+            return -1;
         }
         
         current = Head;
-        int xth = listLength - x;
+        int xth = listLen - n;
         for(int i = 0;  i < xth; i++)
         {
           current = current.Next;
         }
-        return current;
+        return current.Data;
     }
 
     public void PrintList()
@@ -83,5 +82,13 @@ class SinglyLinkedList
 
 SinglyLinkedList linkedList = new SinglyLinkedList(new int[]{1, 2, 3, 4, 5, 6, 7});
 linkedList.PrintList(); // 1 2 3 4 5 6 7
-Node thirstLast = linkedList.FindNthToLast(3); 
-Console.WriteLine(thirstLast.Data); // 5
+int thirstLast = linkedList.FindNthToLast(3); 
+Console.WriteLine(thirstLast); // 5
+
+/**
+  Method      | Time Complexity | Space Complexity 
+FindNthToLast |     O(n)        |  
+
+Online Resource:
+  https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
+*/
