@@ -1,6 +1,6 @@
 class MergeSort
 {
-    private void Merge(int[] numbers, int start, int mid, int end)
+    private void SplitNMerge(int[] numbers, int start, int mid, int end)
     {
         int len1 = mid - start + 1;
         int len2 = end - mid;
@@ -16,14 +16,16 @@ class MergeSort
         int[] half2 = new int[len2];
         for(j = 0; j < len2; j++)
         {
+             
             half2[j] = numbers[j + mid + 1];
-        }
+        }        
 
         int k = start;
         i = 0;
         j = 0;
         while(i < len1 || j < len2)
         {
+            Console.Write($"k = {k} ");
             if (i < len1 && j < len2)
             {
                if (half1[i] <= half2[j])
@@ -49,6 +51,7 @@ class MergeSort
             }
             k++;
         }
+         Console.Write("\n");
     }
 
     public void SortnMerge(int[] numbers, int start, int end)
@@ -58,7 +61,8 @@ class MergeSort
             int mid = (start +  end)/ 2;
             SortnMerge(numbers, start, mid);
             SortnMerge(numbers, mid + 1, end);
-            Merge(numbers, start, mid, end);
+
+            SplitNMerge(numbers, start, mid, end);
         }   
     }
 
@@ -112,5 +116,5 @@ Output:
     
 Online Resource:  
   https://www.geeksforgeeks.org/merge-sort/
-  https://practice.geeksforgeeks.org/problems/merge-sort/1/
+  https://practice.geeksforgeeks.org/problems/merge-sort/1/ 
 **/

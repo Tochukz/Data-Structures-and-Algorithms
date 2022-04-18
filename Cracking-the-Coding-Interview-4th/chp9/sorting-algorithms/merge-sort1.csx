@@ -5,7 +5,7 @@
 
 class MergeSort
 {
-    private void Merge(List<int> list, int start, int mid, int end)
+    private void SplitNMerge(List<int> list, int start, int mid, int end)
     {
         int len1 = mid - start + 1;
         List<int> half1 = new List<int>();
@@ -64,7 +64,7 @@ class MergeSort
             SortnMarge(list, start, mid);
             SortnMarge(list, mid + 1, end);
 
-            Merge(list, start, mid, end);
+            SplitNMerge(list, start, mid, end);
         }
     }
 
