@@ -5,3 +5,7 @@
    FOLLOW UP
    Write the test cases for this method.
 */
+
+function removeDuplicates() {
+    
+}
