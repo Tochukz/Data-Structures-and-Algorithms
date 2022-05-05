@@ -50,7 +50,7 @@ class Exercise32A
     {
         if (Elements.Count == 0)
         {
-            return -1
+            return -1;
             // throw new Exception("The stack is empty!");
         }
         return MinElements.Peek();
