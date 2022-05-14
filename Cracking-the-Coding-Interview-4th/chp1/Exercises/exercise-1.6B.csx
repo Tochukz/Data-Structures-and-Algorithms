@@ -33,9 +33,6 @@ class Exercise16B
     {
         int outerLen = matrix.GetLength(0);
         int innerLen = matrix.GetLength(1);
-        int start = 0;
-        int end = innerLen -1;
-
         for(int i = 0; i < outerLen; i++)
         {
             for(int j = i; j < innerLen; j++)
@@ -132,7 +129,7 @@ Console.WriteLine("Matrix 180 Deg rotate:");
 exer.PrintMatrix(matrix3);
 
 /**
-This solution hadles the rotation of the matrix in-place. 
+This solution handles the rotation of the matrix in-place. 
 It only supports square matrices.
 
 Output: 
