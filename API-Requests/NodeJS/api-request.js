@@ -88,7 +88,7 @@ class ApiRequest
     }
 }
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NTQ1NzQ4MjEsImV4cCI6MTY1NDYwMzYyMSwiaXNzIjoiaHR0cDpvamxpbmtzLWFwaS50ZXN0OjgwODQifQ.DcYXmQ4qZnRrnTWkKmxlARHQt0L9oRlTQnbziJRPvp4';
+const token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
 const baseUrl = 'http://ojlinks-api.test:8084';
 const apiRequest = new ApiRequest(baseUrl, token);
 
