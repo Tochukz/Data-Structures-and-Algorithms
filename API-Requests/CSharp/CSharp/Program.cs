@@ -15,8 +15,7 @@ namespace CSharp
 	{
         private static readonly string BaseUrl = "http://ojlinks-api.test:8084";
 
-        private static readonly string Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NTQ2MTk4NjUsImV4cCI6MTY1NDY0ODY2NSwiaXNzIjoiaHR0cDpvamxpbmtzLWFwaS50ZXN0OjgwODQifQ.OZA5MscSrfknn7fHmB6ib-xiKgyxPWDAvvXuxtT4pvU";
-
+        private static readonly string Token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
         static void Main(string[] args)
 		{
