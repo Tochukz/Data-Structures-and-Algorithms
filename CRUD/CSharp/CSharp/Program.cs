@@ -13,12 +13,14 @@ namespace CSharp
 
 		public static void Main(string[] args)
 		{
+			// Select All
 			List<Book> books =  GetBooks();
 			foreach(Book book in books)
 			{
 				Console.WriteLine($"{book.bookId}) {book.title} by {book.author} {book.edition} at R{book.price}");
 			}
 
+			// Select Single
 			int bookId = 7;
 			Book bookX = GetBook(bookId);
 			if (bookX != null)
@@ -26,7 +28,7 @@ namespace CSharp
 				Console.WriteLine($"Book {bookX.bookId}: {bookX.title} by {bookX.author}");
 			}
 			
-
+			// Insert
 			Book newBook = AddBook(new Book
 			{
 				title = "Further Mathematic for Kids",
@@ -39,6 +41,34 @@ namespace CSharp
 			{
 				Console.WriteLine($"New Book {newBook.bookId}: {newBook.title} by {newBook.author}");
 			}
+
+			// Update
+			Book updatedBook = UpdateBook(new Book
+			{
+				bookId = 156,
+				title = "Further Mathematic for Kids",
+				author = "Tochukwu Nwachukwu & Folks",
+				price = 5580,
+				edition = "5nd Edition",
+				subcategoryId = 3,
+			});
+			if (updatedBook != null)
+			{
+				Console.WriteLine($"Update Book {updatedBook.bookId}: {updatedBook.title} by {updatedBook.author}, {updatedBook.edition} now R{updatedBook.price}");
+			}
+
+			// Delete 
+			int bookIdToDel = 165;
+			int result = DeleteBook(bookIdToDel);
+			if (result > 0)
+			{
+				Console.WriteLine("Deleted Book: " + bookIdToDel);
+			}
+			else
+			{
+				Console.WriteLine($"No book {bookIdToDel} to delete");
+			}
+			
 			Console.ReadLine();
 		}
 
@@ -48,8 +78,7 @@ namespace CSharp
 			SqlConnection connection = new SqlConnection(connectionStr);
 			connection.Open();
 			Console.WriteLine("Connected!");
-			return connection;
-			
+			return connection;			
 		}
 
 		static Book GetBook(int bookId)
@@ -109,27 +138,92 @@ namespace CSharp
 		static Book AddBook(Book book)
 		{
 			SqlConnection connection = Connect();
-			SqlCommand command = new SqlCommand(null, connection);
-			command.CommandText = "INSERT INTO books(title, author, price, edition, subcategoryId) VALUES(@title, @author, @price, @edition, @subcategoryId)";
+			string query = "INSERT INTO books(title, author, price, edition, subcategoryId, createdAt, updatedAt) " +							
+							"VALUES(@title, @author, @price, @edition, @subcategoryId, @createdAt, @updatedAt); "+
+							"SELECT SCOPE_IDENTITY()";
+
+			SqlCommand command = new SqlCommand(query, connection);
+			string now = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
 			SqlParameter titleParam = new SqlParameter("@title", SqlDbType.VarChar, book.title.Length);
 			SqlParameter authorParam = new SqlParameter("@author", SqlDbType.VarChar, book.author.Length);
-			SqlParameter priceParam = new SqlParameter("@price", SqlDbType.Float, (int)book.price);
+			SqlParameter priceParam = new SqlParameter("@price", SqlDbType.Float);
 			SqlParameter editionParam = new SqlParameter("@edition", SqlDbType.VarChar, book.edition.Length);
-			SqlParameter subCatParam = new SqlParameter("@subcategoryId", SqlDbType.Int, book.subcategoryId);
+			SqlParameter subCatParam = new SqlParameter("@subcategoryId", SqlDbType.Int);
+			SqlParameter createdAtParam = new SqlParameter("@createdAt", SqlDbType.DateTime);
+			SqlParameter updatedAtParam = new SqlParameter("@updatedAt", SqlDbType.DateTime);
+
+			titleParam.Value = book.title;
+			authorParam.Value = book.author;
+			priceParam.Value = book.price;
+			editionParam.Value = book.edition;
+			subCatParam.Value = book.subcategoryId;
+			createdAtParam.Value = now;
+			updatedAtParam.Value = now;
 
 			command.Parameters.Add(titleParam);
 			command.Parameters.Add(authorParam);
 			command.Parameters.Add(priceParam);
 			command.Parameters.Add(editionParam);
 			command.Parameters.Add(subCatParam);
-			int bookId = (int)command.ExecuteScalar();
-			Book newBook = GetBook(bookId);
+			command.Parameters.Add(createdAtParam);
+			command.Parameters.Add(updatedAtParam);
+
 			command.Prepare();
-			command.ExecuteNonQuery();
+			decimal bookId = (decimal)command.ExecuteScalar();
+			Book newBook = GetBook(Decimal.ToInt32(bookId));
 			command.Dispose();
+
 			connection.Close();
+
 			return newBook;
+		}
+
+		static Book UpdateBook(Book book)
+		{
+			using(SqlConnection connection = Connect())
+			{
+				string query = "UPDATE books SET edition=@edition, author=@author, price=@price WHERE bookId=@bookId";
+				SqlCommand command = new SqlCommand(query, connection);
+
+				SqlParameter editionParam = new SqlParameter("@edition", SqlDbType.VarChar, book.edition.Length);
+				SqlParameter authorParam = new SqlParameter("@author", SqlDbType.VarChar, book.author.Length);
+				SqlParameter priceParam = new SqlParameter("@price", SqlDbType.Int);
+				SqlParameter bookIdParam = new SqlParameter("@bookId", SqlDbType.Int);
+
+				editionParam.Value = book.edition;
+				authorParam.Value = book.author;
+				priceParam.Value = book.price;
+				bookIdParam.Value = book.bookId;
+
+				command.Parameters.Add(editionParam);
+				command.Parameters.Add(authorParam);
+				command.Parameters.Add(priceParam);
+				command.Parameters.Add(bookIdParam);
+
+				command.Prepare();
+				command.ExecuteNonQuery();
+				command.Dispose();
+
+				Book updateBook = GetBook(book.bookId);
+				return updateBook;
+			}
+		}
+
+		static int DeleteBook(int bookId)
+		{
+			using (SqlConnection connection = Connect())
+			{
+				SqlCommand command = new SqlCommand("DELETE FROM books where bookId=@bookId", connection);
+				SqlParameter param = new SqlParameter("@bookId", SqlDbType.Int);
+				param.Value = bookId;
+
+				command.Parameters.Add(param);
+				command.Prepare();
+				int result = command.ExecuteNonQuery();
+				command.Dispose();
+				return result;
+			}
 		}
 	}
 
