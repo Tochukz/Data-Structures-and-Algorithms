@@ -1,5 +1,5 @@
-/** 
-  Problem: 
+/**
+  Problem:
     Write a method to replace all spaces in a string with ‘%20’.
 */
 
@@ -15,11 +15,9 @@ class Exercise15
            if (str[i] == ' ') // second condition for trim effect
            {
                builder.Append("%20");
+               continue;
            }
-           else
-           {
-               builder.Append(str[i]);
-           }
+           builder.Append(str[i]);
         }
         return builder.ToString();
     }
@@ -46,12 +44,9 @@ class Exercise15
                charArry2[j--] = '0';
                charArry2[j--] = '2';
                charArry2[j--] = '%';
+               continue;
             }
-            else 
-            {
-                charArry2[j--] = charArry1[i];
-            }
-            
+            charArry2[j--] = charArry1[i];
         }
         return string.Join("", charArry2);
     }
@@ -77,11 +72,9 @@ class Exercise15
                strChars[j--] = '0';
                strChars[j--] = '2';
                strChars[j--] = '%';
+               continue;
             }
-            else
-            {
-               strChars[j--] = strChars[i];
-            }
+            strChars[j--] = strChars[i];
         }
     }
 
@@ -98,7 +91,7 @@ class Exercise15
 Exercise15 exer = new Exercise15();
 string str = "Mr John Smith ";
 Console.WriteLine(exer.ReplaceSpaces(str)); // Mr%20John%20Smith
-Console.WriteLine(exer.ReplaceSpace2(str)); // Mr%20John%20Smith 
+Console.WriteLine(exer.ReplaceSpace2(str)); // Mr%20John%20Smith
 Console.WriteLine(exer.ReplaceSpaces3(str)); // Mr%20John%20Smith
 
 char[] strChars = str.ToCharArray();
@@ -112,6 +105,6 @@ Method         | Time Complexity | Space Complexity
 ReplaceSpaces  |    O(n)         | O(1)
 ReplaceSpace2  |  O(n Log n)     | O(n Log n);
 
-Online Resource 
+Online Resource
   https://www.geeksforgeeks.org/urlify-a-given-string-replace-spaces-with-%20/
 */

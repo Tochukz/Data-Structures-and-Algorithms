@@ -1,10 +1,48 @@
 /**
- Problem: 
-   Write a method to decide if two strings are anagrams or not. 
+ Problem:
+   Write a method to decide if two strings are anagrams or not.
 */
 public class Excerise14
 {
     public static bool isAnagram(string word, string anagram)
+    {
+        if (word.Length != anagram.Length)
+        {
+            return false;
+        }
+        if (word == anagram)
+        {
+            return true;
+        }
+        Dictionary<char, int> dict = new Dictionary<char, int>();
+        for(int i = 0; i < word.Length; i++)
+        {
+            char x = word[i];
+            if (!dict.ContainsKey(x))
+            {
+                dict.Add(x, 0);
+            }
+            dict[x] += 1;
+        }
+
+        for(int j = 0; j < anagram.Length; j++)
+        {
+            char y = anagram[j];
+            if (!dict.ContainsKey(y))
+            {
+                return false;
+            }
+            if (dict[y] == 0)
+            {
+                return false;
+            }
+            dict[y]--;
+        }
+
+        return true;
+    }
+  
+    public static bool isAnagram2(string word, string anagram)
     {
         if (word.Length != anagram.Length)
         {
@@ -17,7 +55,7 @@ public class Excerise14
         Array.Sort(letters2);
         for(int i = 0; i < letters1.Count(); i++)
         {
-            if (letters1[i] != letters2[i]) 
+            if (letters1[i] != letters2[i])
             {
                 return false;
             }
@@ -25,7 +63,7 @@ public class Excerise14
         return true;
     }
 
-    public static bool isAnagram2(string word, string anagram)
+    public static bool isAnagram3(string word, string anagram)
     {
          if (word.Length != anagram.Length)
          {
@@ -39,45 +77,6 @@ public class Excerise14
          string str2 = string.Join("", letters2);
          return string.Equals(str1, str2);
     }
-
-    public static bool isAnagram3(string word, string anagram)
-    {
-        if (word.Length != anagram.Length)
-        {
-            return false;
-        }
-        Dictionary<char, int> dict = new Dictionary<char, int>();
-        for(int i = 0; i < word.Length; i++)
-        {
-            char x = word[i];
-            if (!dict.ContainsKey(x))
-            {
-              dict.Add(x, 0);
-            }
-            dict[x] += 1;
-        }
-
-        for(int i = 0; i < anagram.Length; i++)
-        {
-            char x = anagram[i];
-            if (!dict.ContainsKey(x))
-            {
-              return false;
-            }
-            dict[x] -= 1;
-        }
-
-        foreach(KeyValuePair<char, int> item in dict)
-        {
-           if (item.Value != 0)
-           {
-               return false;
-           }
-        }
-        return true;
-    }
-
-    
 }
 
 /*
@@ -90,7 +89,7 @@ if (Excerise14.isAnagram2(word1, anagram1))
 {
     Console.WriteLine($"{anagram1} is an anagram of {word1}");
 }
-else 
+else
 {
     Console.WriteLine($"{anagram1} NOT an anagram of {word1}");
 }
@@ -100,7 +99,7 @@ if (Excerise14.isAnagram2(word2, anagram2))
 {
     Console.WriteLine($"{anagram2} is an anagram of {word2}");
 }
-else 
+else
 {
     Console.WriteLine($"{anagram2} NOT an anagram of {word2}");
 }
@@ -110,15 +109,15 @@ if (Excerise14.isAnagram2(word3, anagram3))
 {
     Console.WriteLine($"{anagram3} is an anagram of {word3}");
 }
-else 
+else
 {
     Console.WriteLine($"{anagram3} NOT an anagram of {word3}");
 }
 
 
-/** Output: 
+/** Output:
 rescue is an anagram of secure
-rasp is an anagram of spar     
+rasp is an anagram of spar
 sister NOT an anagram of master
 
 */

@@ -1,15 +1,15 @@
 /**
- Problem: 
-   Design an algorithm and write code to remove the duplicate characters in a string without using any additional buffer. 
+ Problem:
+   Design an algorithm and write code to remove the duplicate characters in a string without using any additional buffer.
      NOTE: One or two additional variables are fine. An extra copy of the array is not.
    FOLLOW UP
    Write the test cases for this method.
 */
 
-public class Exercise13 
+public class Exercise13
 {
     public string RemoveDuplicates(char[] str)
-    {       
+    {
        if (str.Length < 2)
        {
            return string.Join("", str);
@@ -29,13 +29,13 @@ public class Exercise13
 
            if (i == j)
            {
-               str[index++] = str[i]; 
+               str[index++] = str[i];
            }
        }
        return string.Join("", str.Take(index));
     }
-   
-    
+
+
     /** This solution is my choice solution. It removes the duplicate in the char[] in place. */
     public void RemoveDuplicates2(ref char[] strChars)
     {
@@ -43,7 +43,7 @@ public class Exercise13
         for(int i = 0; i < strChars.Length; i++)
         {
             int j;
-            for(j = 0; j < strChars.Length; j++)
+            for(j = 0; j < i; j++)
             {
                 if (strChars[i] == strChars[j])
                 {
@@ -53,11 +53,11 @@ public class Exercise13
             if (i == j)
             {
                 strChars[index] = strChars[i];
-                index++;   
-            } 
+                index++;
+            }
         }
         Array.Resize(ref strChars, index);
-    } 
+    }
 
     /**
      * This solution does NOT address the contraints outlined in the question but is another way to remove duplicates in a string
@@ -80,7 +80,7 @@ public class Exercise13
 
 Exercise13 exer = new Exercise13();
 string hippo = "hippopotamus";
-string geeks = "geeksforgeeks"; 
+string geeks = "geeksforgeeks";
 char[] hippoChars = hippo.ToCharArray();
 char[] geeksChars = geeks.ToCharArray();
 
@@ -104,6 +104,6 @@ Console.WriteLine("{0} {1}", string.Join("", hippoChars1), string.Join("", geeks
   RemoveDuplicates  | O(n^2)           | O(1)
   RemoveDupUsingSet | O(n Log n)       | O(n)
 
-Online Resouce 
+Online Resouce
   https://www.geeksforgeeks.org/remove-duplicates-from-a-given-string/#_=_
 */
