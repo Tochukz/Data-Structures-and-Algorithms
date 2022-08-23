@@ -2,3 +2,6 @@
 .vs
 *.exe
 *.class
+TryIt/*.csx
+TryIt/*.java
+TryIt/*.cpp

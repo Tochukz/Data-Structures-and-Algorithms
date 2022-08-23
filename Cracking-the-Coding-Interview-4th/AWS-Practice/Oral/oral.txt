@@ -1,0 +1,3 @@
+Oral Questions
+1. Why is a StringBuilder more efficient that copying to a new string?
+2. How would you implement a hash map or hash table?

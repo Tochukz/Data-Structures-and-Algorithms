@@ -1,12 +1,13 @@
 # Cracking the Code Interview 4th Edition (2010)
 __By Gayle Laakmann__  
 
-[Code Examples](https://www.careercup.com/careercup_book_solutions)
+[Code Examples](https://www.careercup.com/careercup_book_solutions)  
+[CareerCup Resources](https://careercup.com/)
 
 __My Code Examples__  
 The original examples in the book was written in Java. I have adapted my own examples for C# and compiled them using the `csi.exe`  
 
-__Using csi to compile C#__  
+__Using csi to compile C# Code__  
 You can use `csi.exe` to interpret C# script file
  * Write you C# code and save it as `.csx` file
  ```
@@ -21,8 +22,10 @@ You can use `csi.exe` to interpret C# script file
  >  csi myscript.csx
  ```  
 
+If you are on MacOS, you can install _Visual Studio For Mac_ and `csi` will be available on your terminal.  
+
  __Why use csi__  
- csi will allow you to write top level statement outside of a class method. For example, the following code can be written outside of a class method.
+ `csi` will allow you to write top level statement outside of a class method. For example, the following code can be written outside of a class method.
  ```
  Dictionary<int, Student> studentMap = physicsClass.BuildStudents(students);
  foreach(KeyValuePair<int, Student> keyVal in studentMap)
@@ -31,10 +34,10 @@ You can use `csi.exe` to interpret C# script file
  }
 
  ```
-
+`csi` provides a convenient way of writing a stand alone script in a single file without having to  create a _Visual studio project_.  
 
  __Java Examples__  
- You can run the Java examples by installing JDK and using the `java` command on you `.java` files.  
+ You can run the Java examples by installing [Java JDK](https://www.oracle.com/java/technologies/downloads) and using the `java` command on you `.java` files.  
  ```
 > java Example.java
  ```
