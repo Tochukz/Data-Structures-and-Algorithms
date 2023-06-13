@@ -1,34 +1,11 @@
 /**
-  Problem: 
-    Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees. 
+  Problem:
+    Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees.
     Can you do this in place?
 */
 
-class Exercise16B 
+class Exercise16B
 {
-    
-    private void RowReversal(int[,] matrix)
-    {
-        int outerLen = matrix.GetLength(0);
-        int innerLen = matrix.GetLength(1);
-        int start;
-        int end;
-        for(int i = 0; i < outerLen; i++)
-        {
-            start = 0;
-            end = innerLen - 1;
-            while(start < end )
-            {
-                int temp = matrix[i, end];
-                matrix[i, end] =  matrix[i, start];     
-                matrix[i, start]  = temp;
-                start++;
-                end--;       
-            }
-            
-        }
-    }
-
     private void Transpose(int[,] matrix)
     {
         int outerLen = matrix.GetLength(0);
@@ -41,6 +18,28 @@ class Exercise16B
                 matrix[i, j] = matrix[j, i];
                 matrix[j, i] = temp;
             }
+        }
+    }
+
+    private void RowReversal(int[,] matrix)
+    {
+        int outerLen = matrix.GetLength(0);
+        int innerLen = matrix.GetLength(1);
+        int start;
+        int end;
+        for(int i = 0; i < outerLen; i++)
+        {
+            start = 0;
+            end = innerLen - 1;
+            while(start < end )
+            {
+                int temp = matrix[i, start];
+                matrix[i, start] = matrix[i, end];
+                matrix[i, end] =  temp;
+                start++;
+                end--;
+            }
+
         }
     }
 
@@ -93,21 +92,21 @@ class Exercise16B
 Exercise16B exer = new Exercise16B();
 
 int[,] matrix1 = {
-    {1,    2,    3,    4},    
+    {1,    2,    3,    4},
     {5,    6,    7,    8},
     {9,    10,   11,   12},
     {13,   14,   15,   16}
 };
 
 int[,] matrix2 = {
-    {1,    2,    3,    4},    
+    {1,    2,    3,    4},
     {5,    6,    7,    8},
     {9,    10,   11,   12},
     {13,   14,   15,   16}
 };
 
 int[,] matrix3 = {
-    {1,    2,    3,    4},    
+    {1,    2,    3,    4},
     {5,    6,    7,    8},
     {9,    10,   11,   12},
     {13,   14,   15,   16}
@@ -129,12 +128,12 @@ Console.WriteLine("Matrix 180 Deg rotate:");
 exer.PrintMatrix(matrix3);
 
 /**
-This solution handles the rotation of the matrix in-place. 
+This solution handles the rotation of the matrix in-place.
 It only supports square matrices.
 
-Output: 
+Output:
     Matrix:
-    1 2 3 4 
+    1 2 3 4
     5 6 7 8
     9 10 11 12
     13 14 15 16
@@ -154,8 +153,8 @@ Output:
     5 6 7 8
     1 2 3 4
 
-Online Resourse: 
-  https://www.geeksforgeeks.org/turn-an-image-by-90-degree/  
+Online Resourse:
+  https://www.geeksforgeeks.org/turn-an-image-by-90-degree/
   https://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/
   https://www.geeksforgeeks.org/rotate-matrix-90-degree-without-using-extra-space-set-2/
   https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/?ref=rp

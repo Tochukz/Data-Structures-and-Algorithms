@@ -1,6 +1,6 @@
 /**
-  Problem: 
-    Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees. 
+  Problem:
+    Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees.
     Can you do this in place?
 */
 
@@ -13,8 +13,8 @@ class Exercise16A
             return matrix;
         }
         int outerLen = matrix.GetLength(0);
-        var innerLen = matrix.GetLength(1);
-    
+        int innerLen = matrix.GetLength(1);
+
         int[,] transformedMatrix = new int[innerLen, outerLen];
         int x = 0;
         for (int j = 0; j < innerLen; j++)
@@ -38,7 +38,7 @@ class Exercise16A
         }
         int outerLen = matrix.GetLength(0);
         var innerLen = matrix.GetLength(1);
-    
+
         int[,] transformedMatrix = new int[innerLen, outerLen];
         int x = 0;
         for (int j = innerLen -1; j >=0; j--)
@@ -59,7 +59,7 @@ class Exercise16A
         int outerLen = matrix.GetLength(0);
         int innerLen = matrix.GetLength(1);
         int[,] flippedMatrix = new int[outerLen, innerLen];
-        
+
         int k =  0;
         for(int i = outerLen - 1; i >= 0; i--)
         {
@@ -71,7 +71,7 @@ class Exercise16A
         }
         return flippedMatrix;
     }
-    
+
     public void PrintMatrix(int[,] matrix)
     {
         for(int i = 0;  i < matrix.GetLength(0); i++)
@@ -94,7 +94,7 @@ class Exercise16A
 
 Exercise16A exer = new Exercise16A();
 int[,] matrix = {
-    {1,    2,    3,    4},    
+    {1,    2,    3,    4},
     {5,    6,    7,    8,},
     {9,    10,    11,    12}
 };
@@ -113,16 +113,16 @@ int[,] transformed180 = exer.Flip180(matrix);
 Console.WriteLine("Matrix 1 180 Deg rotate:");
 exer.PrintMatrix(transformed180);
 
-/** 
-The solution using an auxillary space of O(n). 
-The solution supports the rotation of non-square matrix. 
+/**
+The solution using an auxillary space of O(n).
+The solution supports the rotation of non-square matrix.
 
 To handle the rotation of a square matrix in-place, see exercise-1.6B
 
 Output:
   Matrix 1:
-  1   2   3   4   
-  5   6   7   8   
+  1   2   3   4
+  5   6   7   8
   9   10  11  12
   Matrix 1 90 Deg right rotate:
   9   5   1
@@ -139,8 +139,8 @@ Output:
   5   6   7   8
   1   2   3   4
 
-Online Resourse: 
-  https://www.geeksforgeeks.org/turn-an-image-by-90-degree/  
+Online Resourse:
+  https://www.geeksforgeeks.org/turn-an-image-by-90-degree/
   https://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/
   https://www.geeksforgeeks.org/rotate-matrix-90-degree-without-using-extra-space-set-2/
   https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/?ref=rp
