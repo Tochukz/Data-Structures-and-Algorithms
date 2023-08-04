@@ -1,6 +1,7 @@
 /**
  Problem:
    Write a method to decide if two strings are anagrams or not.
+   An anagram is a word, phrase, or name formed by rearranging the letters of another, such as spar, formed from rasp.
 */
 public class Excerise14
 {
@@ -41,7 +42,7 @@ public class Excerise14
 
         return true;
     }
-  
+
     public static bool isAnagram2(string word, string anagram)
     {
         if (word.Length != anagram.Length)

@@ -1,5 +1,5 @@
 # How HashMaps work internally in Java
-[](https://www.youtube.com/watch?v=_yztwXlfNdw)
+[How hashmap works](https://www.youtube.com/watch?v=_yztwXlfNdw)
 1. The Hashmap has an internal array of 16 elements which is it's initial capacity.
 
 ```
