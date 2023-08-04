@@ -1,5 +1,5 @@
 /**
-* Problem: Imlement a function ro reverse a string 
+* Problem: Implement a function ro reverse a string 
 */
 using System.Text;
 using System.Collections.Generic;

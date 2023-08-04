@@ -1,3 +1,6 @@
+/**
+* Problem: Write a method to replace all the spaces in a string with "%20". 
+*/
 using System;
 using System.Text;
 

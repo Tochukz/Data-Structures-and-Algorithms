@@ -1,36 +1,48 @@
+/**
+* Problem: Write a method to replace all the spaces in a string with "%20". 
+* The string should be represented by a character array whose length is long enough to contain all the additional characters.
+* This should be done in place.       
+*/
 using System;
 using System.Text;
 
 class Exercise14B {
-   public char[] ReplaceSpaces(char[] word) {
-      int len = 0;
+   public void ReplaceSpaces(char[] word) {      
+      // Find the last char elment in the character array. Stop when you find an null element
+      int lastCharIndex = 0;
       for (int i = 0; i < word.Length; i++) {
-          char x = word[i];
-          if (x == ' ') {
-            len += 3;
-            continue;
-          }
-          len += 1;
+         char x = word[i];
+         if (x == '\0') {
+           lastCharIndex = i - 1;
+           break;
+         }
       }
-      char[] updatedWord = new char[len];
-      int index = 0;
-      for (int j = 0; j < word.Length; j++) {
-         char x = word[j];
+
+      // Fill the array from the back start with the last charater
+      int k = lastCharIndex;
+      int j = word.Length - 1;
+      while (j >= 0)  {
+         char x = word[k];
          if (x == ' ') {
-            updatedWord[index++] = '%';
-            updatedWord[index++] = '2';
-            updatedWord[index++] = '0';
+            word[j--] = '0';
+            word[j--] = '2';
+            word[j--] = '%';
+            k--;
             continue;
          }
-         updatedWord[index++] = x;
+         word[j--] = word[k--];
+         if (k < 0) {
+            break;
+         }
       }
-      return updatedWord;
    }
 
-   public void PrintArray(char[] word) {
+   public string Join(char[] word) {
+      StringBuilder builder = new StringBuilder();
       foreach(char x in word) {
-        Console.Write(x);
+        builder.Append(x);
       }
+      return builder.ToString();
    }
 
    public bool Compare(char[] word1, char[]word2) {
@@ -41,34 +53,56 @@ class Exercise14B {
       }
       return true;
    }
+
    public void Test(Dictionary<char[], char[]> testCases) {
       foreach(KeyValuePair<char[], char[]> item in testCases) {
-         char[] result = ReplaceSpaces(item.Key);
-         if (Compare(result, item.Value)) {
+         ReplaceSpaces(item.Key);
+         if (Compare(item.Key, item.Value)) {
             Console.WriteLine("Pass!");
             continue;
          }
-         Console.Write($"Failed expected ");
-         PrintArray(item.Value);
-         Console.Write(" got ");
-         PrintArray(result);
-         Console.WriteLine(" ");
+         Console.WriteLine($"Failed: expected {Join(item.Value)} got {Join(item.Key)}");      
       }
+   }
+
+   public char[] Copy(char[] container, char[] values) {
+      //Check if container length is long enough when every ' '  is replaces by '%', '2', '0'.
+      int len = values.Length;
+      for(int i =0; i < values.Length; i++) {
+         if (values[i] == ' ') {
+            len = len + 2;
+         }
+      }
+      if (len != container.Length) {
+         throw new Exception($"Length mismatch between container {container.Length} and values {Join(values)}");
+      }
+
+      // Copy the values
+      for(int i =0; i < values.Length; i++) {
+        container[i] = values[i];
+      }
+      return container;
    }
 }
 
 Exercise14B exercise = new Exercise14B();
+
+
+char[] values1 = exercise.Copy(new char[17], new char[]{'M','r',' ', 'J','o','h','n', ' ','S','m','i','t','h'});
+char[] values2 = exercise.Copy(new char[18],  new char[]{'J','e','r','e','m','y',' ','K','e','l','v','i','n', ' '});
+char[] values3  = exercise.Copy(new char[15], new char[]{' ','K','a','l','v','i','n', ' ', ' '});
+
 Dictionary<char[], char[]> testCases = new Dictionary<char[], char[]> {
   { 
-   new char[]{'M','r',' ', 'J','o','h','n', ' ','S','m','i','t','h'}, 
-   new char[]{'M','r','%', '2','0','J','o','h','n','%','2','0','S','m','i','t','h'}
+   values1, 
+   new char[17]{'M','r','%', '2','0','J','o','h','n','%','2','0','S','m','i','t','h'}
   },
   { 
-   new char[]{'J','e','r','e','m','y',' ','K','e','l','v','i','n', ' '}, 
-   new char[]{'J','e','r','e','m','y','%','2','0','K','e','l','v','i','n','%','2','0'}
+   values2,
+   new char[18]{'J','e','r','e','m','y','%','2','0','K','e','l','v','i','n','%','2','0'}
   },
   { 
-   new char[]{' ','K','a','l','v','i','n', ' ', ' '} ,
+    values3,
    new char[]{'%','2','0','K','a','l','v','i','n','%','2','0','%','2','0'}
   },
 };

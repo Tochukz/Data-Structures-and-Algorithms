@@ -13,3 +13,6 @@ __ArrayList__
 
 __StringBuffer__  
 A good way to practice string, arrays and general data structures is to implement your own version of StringBuffer. 
+
+___Practice Exercises__  
+https://www.geeksforgeeks.org/urlify-a-given-string-replace-spaces-with-%20/#practice
