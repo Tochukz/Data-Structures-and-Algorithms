@@ -1,6 +1,6 @@
 /**
 * Problem: Implement and algorithm to determine if a string has all unique charaters. 
-* You implementation should not use any additional data structure
+* Your implementation should not use any additional data structure
 */
 using System;
 using System.Collections.Generic;

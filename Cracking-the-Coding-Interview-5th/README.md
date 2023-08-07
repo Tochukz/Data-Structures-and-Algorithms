@@ -5,14 +5,14 @@ __By Gayle Laakmann McDowell__
 
 ## Section VIII: Interview Questions
 ## Data Structures
-### Chapter 1: Arrays and Strings - Pg 71
+### Chapter 1: Arrays and Strings - Pg 80
 __HashTable__  
 Prior to you interview, it is recommended that you practice both implementing and using hash tables.  
 
 __ArrayList__  
 
 __StringBuffer__  
-A good way to practice string, arrays and general data structures is to implement your own version of StringBuffer. 
+A good way to practice string, arrays and general data structures is to implement your own version of StringBuffer.
 
 ___Practice Exercises__  
 https://www.geeksforgeeks.org/urlify-a-given-string-replace-spaces-with-%20/#practice

@@ -8,7 +8,7 @@ using System.Text;
 
 class Exercise14B {
    public void ReplaceSpaces(char[] word) {      
-      // Find the last char elment in the character array. Stop when you find an null element
+      // Find the last char elment in the character array. Stop when you find a null element
       int lastCharIndex = 0;
       for (int i = 0; i < word.Length; i++) {
          char x = word[i];
@@ -18,7 +18,7 @@ class Exercise14B {
          }
       }
 
-      // Fill the array from the back start with the last charater
+      // Fill the array from the back start with starting with the last charater
       int k = lastCharIndex;
       int j = word.Length - 1;
       while (j >= 0)  {
