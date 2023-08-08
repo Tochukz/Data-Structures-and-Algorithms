@@ -18,24 +18,7 @@ class Node {
 
 class Exercise21A {
     public void RemoveDuplicates(Node head) {
-       Node runningNode = head; 
-       while(runningNode != null) {
-          Node prev = null;
-          Node current = runningNode.Next;
-          while(current != null) {
-            if (runningNode.Data == current.Data) {
-               if (prev == null) {
-                   runningNode.Next = current.Next;
-               } else {
-                  prev.Next = current.Next;
-               }
-            } else {
-                prev = current;                
-            }
-            current = current.Next;
-          }
-          runningNode = runningNode.Next;
-       }
+      // Write your solution here
     }
 
     public Node MakeSinglyLinkedList(int[] numbers) {
