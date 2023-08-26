@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 
 class Exercise17 {
-   
    public int[,] Zeroed(int[,] matrix) {
        // Write your solution here
       return new int[,];
@@ -56,6 +55,9 @@ class Exercise17 {
              Console.WriteLine("Pass!");
           } else {
              Console.WriteLine("Failed!");
+             Console.WriteLine("Expected:");
+             PrintMatrix(item.Value);
+             Console.WriteLine("Got:");
              PrintMatrix(result);
 
           }
