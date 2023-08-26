@@ -30,6 +30,6 @@ Dictionary<string, string> testCases = new Dictionary<string, string> {
   {"Hello", "olleH"},
   {"Tiger", "regiT"},
   {"Hippopotamouse", "esuomatopoppiH"},
-  {"Peter", "reteT"}
+  {"Peter", "reteP"}
 };
 exercise.Test(testCases);

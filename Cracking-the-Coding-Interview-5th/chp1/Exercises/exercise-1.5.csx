@@ -10,17 +10,16 @@ class Exercise15 {
         while(i < str.Length) {
           char x = str[i]; 
           int count = 1;
-          for (int j = i+1; j < str.Length; j++) {
-             char y = str[j];
-             if (x == y) {                
+          int j;
+          for (j = i+1; j < str.Length; j++) {
+             if (str[j] == x) {                
                 count++;
-                i++;
              } else {
                 break;
              }
-          }
-          i++;
+          }          
           builder.Append($"{x}{count}");
+          i = j;
         }
         string compressed = builder.ToString();
         if (compressed.Length >= str.Length) {

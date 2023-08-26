@@ -1,5 +1,5 @@
 /**
-* Given two string, write a method to decide of one string is a permutation of the other.  
+* Given two string, write a method to decide if one string is a permutation of the other.  
 */
 using System;
 using System.Collections.Generic;

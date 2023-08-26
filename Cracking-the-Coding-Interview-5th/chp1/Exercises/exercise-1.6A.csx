@@ -60,6 +60,9 @@ class Exercise16A {
               Console.WriteLine("Pass!");
            } else {
               Console.WriteLine("Failed!");
+              Console.WriteLine("Expected:");
+              PrintMatrix(item.Value);
+              Console.WriteLine("Got:");
               PrintMatrix(result);
            }
         }

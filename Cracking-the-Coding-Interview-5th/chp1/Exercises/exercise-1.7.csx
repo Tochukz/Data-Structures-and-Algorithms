@@ -12,7 +12,7 @@ class Exercise17 {
       //Make row zero
       int startI = 0;
       int endI = cols - 1;
-      while(startI < endI) {
+      while(startI <= endI) {
          matrix[row, startI] = 0;
          matrix[row, endI] = 0;
          startI++;
@@ -21,7 +21,7 @@ class Exercise17 {
       // Make col zero
       int startJ = 0;
       int endJ = rows - 1;
-      while(startJ < endJ) {
+      while(startJ <= endJ) {
          matrix[startJ, col] = 0;
          matrix[endJ, col] = 0;
          startJ++;
@@ -87,6 +87,9 @@ class Exercise17 {
              Console.WriteLine("Pass!");
           } else {
              Console.WriteLine("Failed!");
+             Console.WriteLine("Expected:");
+             PrintMatrix(item.Value);
+             Console.WriteLine("Got:");
              PrintMatrix(result);
 
           }

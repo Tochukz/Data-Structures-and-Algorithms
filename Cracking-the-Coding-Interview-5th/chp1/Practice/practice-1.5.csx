@@ -3,6 +3,9 @@
 *   For example, the string aabcccccaaa would become a2b1c5a3. If the compressed string would not become smaller 
 *   than the original string, your method should return the original string.
 */
+
+using System.Text;
+
 class Exercise15 {
     public string Compress(string str) {
         // Write your solution here
