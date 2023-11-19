@@ -18,18 +18,17 @@ class Node {
 class Exercise21A {
     public void RemoveDuplicates(Node head) {
         HashSet<int> set = new HashSet<int>();
-        Node prev = null;
+        Node previous = null;
         Node current = head;
         while(current != null) {        
-            if (set.Contains(current.Data)) {
-               if (prev != null) {
-                  prev.Next = current.Next;
-               }
-            } else {
-                set.Add(current.Data);  
-                prev = current;              
-            }
-            current = current.Next;                      
+             if (set.Contains(current.Data)) {
+                previous.Next = current.Next;
+                current = current.Next;
+                continue;
+            } 
+            set.Add(current.Data);
+            previous = current;
+            current = current.Next;                    
         }
     }
 

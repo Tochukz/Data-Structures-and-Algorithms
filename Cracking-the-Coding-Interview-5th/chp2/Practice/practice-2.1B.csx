@@ -1,5 +1,6 @@
 /**
 * Problem: Write code to remove duplicates from an unsorted linked list.
+*    A temporal buffer is not allowed.  
 */
 
 using System;
@@ -17,7 +18,15 @@ class Node {
 
 class Exercise21A {
     public void RemoveDuplicates(Node head) {
-        // Write your solution here
+       Node previous = null;
+       Node current = head;
+       while(previous != null) {          
+          while(current != null) {
+            current = current.Next;
+          }
+          previous = current;
+          current = current.Next;
+       }
     }
 
     public Node MakeSinglyLinkedList(int[] numbers) {
