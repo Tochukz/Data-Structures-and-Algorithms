@@ -5,7 +5,7 @@
 */
 public class Excerise14
 {
-    public static bool isAnagram(string word, string anagram)
+    public static bool IsAnagram(string word, string anagram)
     {
         if (word.Length != anagram.Length)
         {
@@ -43,7 +43,7 @@ public class Excerise14
         return true;
     }
 
-    public static bool isAnagram2(string word, string anagram)
+    public static bool IsAnagram2(string word, string anagram)
     {
         if (word.Length != anagram.Length)
         {
@@ -64,7 +64,7 @@ public class Excerise14
         return true;
     }
 
-    public static bool isAnagram3(string word, string anagram)
+    public static bool IsAnagram3(string word, string anagram)
     {
          if (word.Length != anagram.Length)
          {
@@ -86,7 +86,7 @@ public class Excerise14
 */
 
 string word1 = "secure", anagram1  = "rescue";
-if (Excerise14.isAnagram2(word1, anagram1))
+if (Excerise14.IsAnagram2(word1, anagram1))
 {
     Console.WriteLine($"{anagram1} is an anagram of {word1}");
 }
@@ -96,7 +96,7 @@ else
 }
 
 string word2 = "spar", anagram2 = "rasp";
-if (Excerise14.isAnagram2(word2, anagram2))
+if (Excerise14.IsAnagram2(word2, anagram2))
 {
     Console.WriteLine($"{anagram2} is an anagram of {word2}");
 }
@@ -106,7 +106,7 @@ else
 }
 
 string word3 = "master", anagram3 = "sister";
-if (Excerise14.isAnagram2(word3, anagram3))
+if (Excerise14.IsAnagram2(word3, anagram3))
 {
     Console.WriteLine($"{anagram3} is an anagram of {word3}");
 }
@@ -126,7 +126,7 @@ sister NOT an anagram of master
 
 /**
  Method     | Time Complexity | Space Complexity |
-isAnagrams  |     O(n)        |    O(n+n)        |
-isAnagram2  |     O(n+n)      |    O(n)          | Have same performace as isAnagrams()
-isAnagram3  |     O(n)        |    O(n+n)        | Fastest. Two times faster than isAnagrams() or isAnagrams2()
+IsAnagrams  |     O(n)        |    O(n+n)        |
+IsAnagram2  |     O(n+n)      |    O(n)          | Have same performace as IsAnagrams()
+IsAnagram3  |     O(n)        |    O(n+n)        | Fastest. Two times faster than IsAnagrams() or IsAnagrams2()
  */
