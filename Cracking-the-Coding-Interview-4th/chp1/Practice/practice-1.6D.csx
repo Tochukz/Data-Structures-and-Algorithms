@@ -1,14 +1,14 @@
 /**
 * Problem:  
-*  Given an image represented by an MxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees to the left.
+*  Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image in place by 90 degrees to the right.
+*  Do it in place. i.e you must not create a copy of the matrix
 */
 using System;
 using System.Collections.Generic;
 
-class Practice16A {
-   public int[,] RotateLeft(int[,] matrix) {
+class Practice16B {
+   public void RotateRight(int[,] matrix) {
       // Write your solution here
-      return matrix;
    }
 
    public bool AreEqualMatrices(int[,] matrix1, int[,] matrix2) {
@@ -21,7 +21,7 @@ class Practice16A {
       if (outerLen != outerLen2 || innerLen != innerLen2) {
          return false;
       }
-
+      
       for (int i = 0; i < outerLen; i++) {
          for (int j = 0; j < innerLen; j++) {
             if (matrix1[i, j] != matrix2[i, j]) {
@@ -45,45 +45,49 @@ class Practice16A {
 
    public void Test(Dictionary<int[,], int[,]> testCases) {
      foreach (KeyValuePair<int[,], int[,]> item in testCases) {
-        int[,] result = RotateLeft(item.Key);
-        if (AreEqualMatrices(item.Value, result)) {
+        RotateRight(item.Key);
+        if (AreEqualMatrices(item.Value, item.Key)) {
            Console.WriteLine("Passed!");
         } else {
           Console.WriteLine("Failed: \n Expected:");
           Print(item.Value);
           Console.WriteLine(" Got: ");
-          Print(result);
+          Print(item.Key);
         }        
      }  
    }
 }
 
-Practice16A Practice = new Practice16A();
+Practice16B Practice = new Practice16B();
 int[,] matrix1 = {
    {1, 2, 3},
    {4, 5, 6},
+   {7, 8, 9}
 };
 int[,] rotate1 = {
-   {3, 6},
-   {2, 5},
-   {1, 4}
+   {7, 4, 1},
+   {8, 5, 2},
+   {9, 6, 3}
 };
 int [,] matrix2 = {
    {1, 2},
    {3, 4}
 };
 int[,] rotate2 = {
-   {2, 4},
-   {1, 3}
+   {3, 1},
+   {4, 2}
 };
 int [,] matrix3 = {
-   {1, 2},
-   {3, 4},
-   {5, 6},
+   {1, 2, 3, 4},
+   {5, 6, 7, 8},
+   {9, 10, 11, 12},
+   {13, 14, 15, 16}
 };
 int [,] rotate3 = {
-   {2, 4, 6},
-   {1, 3, 5},
+   {13, 9, 5, 1},
+   {14, 10, 6, 2},
+   {15, 11, 7, 3},
+   {16, 12, 8, 4}
 };
 int [,] matrix4 = {
    {1, 2, 3, 4},
@@ -92,10 +96,10 @@ int [,] matrix4 = {
    {13, 14, 15, 16}
 };
 int [,] rotate4 = {
-   {4, 8, 12, 16},
-   {3, 7, 11, 15},
-   {2, 6, 10, 14},
-   {1, 5, 9, 13}
+   {13, 9, 5, 1},
+   {14, 10, 6, 2},
+   {15, 11, 7, 3},
+   {16, 12, 8, 4}
 };
 Dictionary<int[,], int[,]> testCases = new Dictionary<int[,], int[,]> {
    {matrix1, rotate1},

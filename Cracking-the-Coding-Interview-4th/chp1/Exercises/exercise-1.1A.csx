@@ -13,6 +13,7 @@ public class Exercise11A
        //Hint: Use bitwise operator. See the corresponding Java code example.
     }
 
+    // This is the most efficient solution
     public bool isUnique(string word)
     {
         bool[] chars = new bool[256];

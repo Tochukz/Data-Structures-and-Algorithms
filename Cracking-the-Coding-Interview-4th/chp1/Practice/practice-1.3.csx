@@ -7,14 +7,28 @@ using System;
 using System.Collections.Generic;
 
 class Practice13 {
-   public void RemoveDuplicates(char[] str) {
-      // Write your solution here
+   public void RemoveDuplicates(ref char[] str) {
+      int index = 0;
+      for (int i = 0; i < str.Length; i++) {
+        int j;
+        for (j = 0 ; j < i; j++) {
+           if (str[i] == str[j]) {
+              break;
+           }
+        }
+
+        if (i == j) {
+          str[index] = str[i];
+          index++;
+        }
+      }
+      Array.Resize(str, index);
    }
 
    public void Test(Dictionary<string, string> testCases) {
      foreach (KeyValuePair<string, string> item in testCases) {
         char[] argArry = item.Key.ToCharArray();
-        RemoveDuplicates(argArry);
+        RemoveDuplicates(ref argArry);
         string argStr = string.Join("", argArry);
         if (item.Value == argStr) {
            Console.WriteLine("Passed!");

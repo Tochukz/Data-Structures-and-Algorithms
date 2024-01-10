@@ -29,15 +29,10 @@ public class Excerise14
         for(int j = 0; j < anagram.Length; j++)
         {
             char y = anagram[j];
-            if (!dict.ContainsKey(y))
-            {
+            if (!dict.ContainsKey(y) || dict[y] < 1) {
                 return false;
             }
-            if (dict[y] == 0)
-            {
-                return false;
-            }
-            dict[y]--;
+            dict[y] -= 1;
         }
 
         return true;
