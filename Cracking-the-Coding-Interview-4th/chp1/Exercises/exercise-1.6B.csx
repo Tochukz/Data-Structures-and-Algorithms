@@ -57,22 +57,19 @@ class Exercise16B
 
     public void Flip180(int[,] matrix)
     {
-        int outerLen = matrix.GetLength(0);
-        int innerLen = matrix.GetLength(1);
-        int start;
-        int end;
-        for(int j = 0; j < innerLen; j++)
-        {
-           start = 0;
-           end = outerLen - 1;
-           while(start < end)
-           {
-               int temp = matrix[start, j];
-               matrix[start, j] = matrix[end, j];
-               matrix[end, j] = temp;
-               start++;
-               end--;
-           }
+        int rowCount = matrix.GetLength(0);
+        int colCount = matrix.GetLength(1);
+
+        int firstIndex = 0;
+        int lastIndex = rowCount - 1;
+        while(firstIndex < lastIndex) {
+            for (int i = 0; i < colCount; i++) {
+                int copy = matrix[firstIndex, i];
+                matrix[firstIndex, i] = matrix[lastIndex, i];
+                matrix[lastIndex, i] = copy;
+            }
+            firstIndex++;
+            lastIndex--;
         }
     }
 

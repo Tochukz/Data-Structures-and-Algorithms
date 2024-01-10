@@ -3,11 +3,12 @@
 *  Write a method to replace all spaces in a string with ‘%20’.
 */
 using System;
+using System.Text;
 using System.Collections.Generic;
 
 class Practice15 {
    public string ReplaceSpaces(string str) {
-      // Write your solution here
+     // Write your solution here
       return str;
    }
 

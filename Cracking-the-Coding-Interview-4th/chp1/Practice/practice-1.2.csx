@@ -3,12 +3,13 @@
 *   Write code to reverse a C-Style String. (C-String means that “abcd” is represented as five characters, including the null character.)
 */
 using System;
+using System.Text;
 using System.Collections.Generic;
 
 class Practice12 {
    public string Reverse(string word) {
       // Write your solution here
-     return word;
+      return word;
    }
 
    public void Test(Dictionary<string, string> testCases) {

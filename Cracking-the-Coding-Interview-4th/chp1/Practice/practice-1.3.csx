@@ -8,21 +8,7 @@ using System.Collections.Generic;
 
 class Practice13 {
    public void RemoveDuplicates(ref char[] str) {
-      int index = 0;
-      for (int i = 0; i < str.Length; i++) {
-        int j;
-        for (j = 0 ; j < i; j++) {
-           if (str[i] == str[j]) {
-              break;
-           }
-        }
-
-        if (i == j) {
-          str[index] = str[i];
-          index++;
-        }
-      }
-      Array.Resize(str, index);
+      // Write your solution here
    }
 
    public void Test(Dictionary<string, string> testCases) {
