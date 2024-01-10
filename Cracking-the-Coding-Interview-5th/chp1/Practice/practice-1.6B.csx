@@ -7,7 +7,7 @@
 using System;
 using System.Collections.Generic;
 
-class Exercise16B {
+class Practice16B {
 
     public void RotateRight(int[,] matrix) {
         // Write your solution here
@@ -78,5 +78,5 @@ Dictionary<int[,], int[,]> testCases = new Dictionary<int[,], int[,]> {
     {matrix1A, matrix1B},
     {matrix2A, matrix2B}
 };
-Exercise16B exercise = new Exercise16B();
-exercise.Test(testCases);
+Practice16B practice = new Practice16B();
+practice.Test(testCases);

@@ -16,7 +16,7 @@ class Node {
     }
 }
 
-class Exercise21A {
+class Practice21A {
     public void RemoveDuplicates(Node head) {
        Node previous = null;
        Node current = head;
@@ -93,11 +93,11 @@ class Exercise21A {
 }
 
 
-Exercise21A exercise = new Exercise21A();
+Practice21A practice = new Practice21A();
 Dictionary<int[], int[]> testCases = new Dictionary<int[], int[]> {
   {new int[] { 2, 2, 3, 5, 1, 1, 7, 11, 9, 2}, new int[] {2, 3, 5, 1, 7, 11, 9}},
   {new int[] {7, 5, 5, 5, 8, 7, 6, 2, 1, 1}, new int[] {7, 5, 8, 6, 2, 1}},
   {new int[] {1, 7, 2, 3, 3, 5, 1, 7, 7}, new int[] {1, 7, 2, 3, 5}}
 };
-exercise.Test(testCases);
+practice.Test(testCases);
 

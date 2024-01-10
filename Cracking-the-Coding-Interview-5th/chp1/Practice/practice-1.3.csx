@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 
-class Exercise13 {
+class Practice13 {
     public bool IsPermutation(string word1, string word2) {    
         // Write your solution here
         return true;
@@ -27,12 +27,12 @@ class Exercise13 {
     }
 }
 
-Exercise13 exercise = new Exercise13();
+Practice13 practice = new Practice13();
 Dictionary<string[], bool> testCases = new Dictionary<string[], bool>() {
   { new string[]{"cancel", "celcan"}, true},
   { new string[]{"hero", "erho"}, true},
   { new string[]{"jimmer", "chima"}, false},
   { new string[]{"binaton", "tonabin"}, true}
 };
-exercise.Test(testCases);
+practice.Test(testCases);
 

@@ -5,7 +5,7 @@
 using System;
 using System.Collections.Generic;
 
-class Exercise11A {
+class Practice11A {
    public bool IsUniqueString(string word) {
       // Write your solution here
       return true;
@@ -23,7 +23,7 @@ class Exercise11A {
    }
 }
 
-Exercise11A exercise = new Exercise11A();
+Practice11A practice = new Practice11A();
 Dictionary<string, bool> testCases = new Dictionary<string, bool> {
     {"Hello", false},
     {"Chima", true},
@@ -32,4 +32,4 @@ Dictionary<string, bool> testCases = new Dictionary<string, bool> {
     {"Javis", true}
 };
 
-exercise.Test(testCases)
+practice.Test(testCases)

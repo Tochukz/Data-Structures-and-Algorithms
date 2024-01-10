@@ -2,7 +2,7 @@
 * Problem: Given an image represented by an NxN matrix, where each pixel in the image is 4bytes,
 *   write a method to rotate the image by 90 degrees.
 */
-class Exercise16A {
+class Practice16A {
     public int[,] RotateRight(int[,] matrix) {
          // Write your solution here
         return new int[,]; 
@@ -85,5 +85,5 @@ Dictionary<int[,], int[,]> testCases = new Dictionary<int[,], int[,]> {
     {matrix1A, matrix1B},
     {matrix2A, matrix2B}
 };
-Exercise16A exercise = new Exercise16A();
-exercise.Test(testCases);
+Practice16A practice = new Practice16A();
+practice.Test(testCases);

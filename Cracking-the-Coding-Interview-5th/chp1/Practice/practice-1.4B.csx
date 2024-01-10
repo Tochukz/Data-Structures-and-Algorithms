@@ -6,7 +6,7 @@
 using System;
 using System.Text;
 
-class Exercise14B {
+class Practice14B {
    public void ReplaceSpaces(char[] word) {      
       // Write your solution here
    }
@@ -59,12 +59,12 @@ class Exercise14B {
    }
 }
 
-Exercise14B exercise = new Exercise14B();
+Practice14B practice = new Practice14B();
 
 
-char[] values1 = exercise.Copy(new char[17], new char[]{'M','r',' ', 'J','o','h','n', ' ','S','m','i','t','h'});
-char[] values2 = exercise.Copy(new char[18],  new char[]{'J','e','r','e','m','y',' ','K','e','l','v','i','n', ' '});
-char[] values3  = exercise.Copy(new char[15], new char[]{' ','K','a','l','v','i','n', ' ', ' '});
+char[] values1 = practice.Copy(new char[17], new char[]{'M','r',' ', 'J','o','h','n', ' ','S','m','i','t','h'});
+char[] values2 = practice.Copy(new char[18],  new char[]{'J','e','r','e','m','y',' ','K','e','l','v','i','n', ' '});
+char[] values3  = practice.Copy(new char[15], new char[]{' ','K','a','l','v','i','n', ' ', ' '});
 
 Dictionary<char[], char[]> testCases = new Dictionary<char[], char[]> {
   { 
@@ -80,4 +80,4 @@ Dictionary<char[], char[]> testCases = new Dictionary<char[], char[]> {
    new char[]{'%','2','0','K','a','l','v','i','n','%','2','0','%','2','0'}
   },
 };
-exercise.Test(testCases);
+practice.Test(testCases);

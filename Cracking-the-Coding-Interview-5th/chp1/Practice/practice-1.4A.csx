@@ -4,7 +4,7 @@
 using System;
 using System.Text;
 
-class Exercise14A {
+class Practice14A {
    public string ReplaceSpaces(string word) {
        // Write your solution here
       return "";
@@ -22,10 +22,10 @@ class Exercise14A {
    }
 }
 
-Exercise14A exercise = new Exercise14A();
+Practice14A practice = new Practice14A();
 Dictionary<string, string> testCases = new Dictionary<string, string> {
   {"Mr John Smith", "Mr%20John%20Smith"},
   {"Jeremy Kelvin ", "Jeremy%20Kelvin%20"},
   {" Kalvin  ", "%20Kalvin%20%20"},
 };
-exercise.Test(testCases);
+practice.Test(testCases);

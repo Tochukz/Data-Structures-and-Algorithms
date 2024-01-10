@@ -14,7 +14,7 @@ class Node {
     }
 }
 
-class Exercise22 {
+class Practice22 {
     public int FindKthLastElement(Node head, int k) {
       // Write your solution here.
     }
@@ -54,10 +54,10 @@ class Exercise22 {
     }
 }
 
-Exercise22 exercise = new Exercise22();
+Practice22 practice = new Practice22();
 Dictionary<int[], int[]> testCases = new Dictionary<int[], int[]> {
   {new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, new int[] { 2, 9 }},
   {new int[] {1, 2, 3, 4, 5, 6, 7}, new int[] {3, 5}},
   {new int[] {1, 2, 1, 7, 5, 6, 17, 11}, new int[] {5, 7}}
 };
-exercise.Test(testCases);
+practice.Test(testCases);

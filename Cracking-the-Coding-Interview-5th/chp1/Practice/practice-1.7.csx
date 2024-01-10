@@ -5,7 +5,7 @@
 using System;
 using System.Collections.Generic;
 
-class Exercise17 {
+class Practice17 {
    public int[,] Zeroed(int[,] matrix) {
        // Write your solution here
       return new int[,];
@@ -91,5 +91,5 @@ Dictionary<int[,], int[,]> testCases = new Dictionary<int[,], int[,]> {
   {matrix1A, matrix1B},
   {matrix2A, matrix2B}
 };
-Exercise17 exercise = new Exercise17();
-exercise.Test(testCases);
+Practice17 practice = new Practice17();
+practice.Test(testCases);
