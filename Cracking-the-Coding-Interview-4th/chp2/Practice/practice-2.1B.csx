@@ -1,5 +1,5 @@
 /**
-* Problem: Write code to remove duplicates from an unsorted linked list 
+* Problem: Write code to remove duplicates from an unsorted linked list without using a temporary buffer
 */
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ class Node {
   }
 }
 
-class Practice21A {
+class Practice21B {
   public void RemoveDuplicate(Node head) {
     // Write your solution here
   }
@@ -80,7 +80,7 @@ class Practice21A {
   }
 }
 
-Practice21A practice = new Practice21A();
+Practice21B practice = new Practice21B();
 
 Node list1 = practice.GenerateLinkedList(new int[]{1, 2, 3, 2, 7, 3, 9, 1, 1});
 Node listA = practice.GenerateLinkedList(new int[]{1, 2, 3, 7, 9});
