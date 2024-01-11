@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 class Practice18 {
    public bool IsRotationOf(string word1, string word2) {
-       // Write your solution here
+      // Write your solution here
       return false;
    }
 

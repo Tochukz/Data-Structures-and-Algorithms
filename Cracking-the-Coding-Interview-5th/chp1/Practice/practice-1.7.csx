@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 class Practice17 {
    public int[,] Zeroed(int[,] matrix) {
-       // Write your solution here
+      // Write your solution here
       return new int[,];
    }
 

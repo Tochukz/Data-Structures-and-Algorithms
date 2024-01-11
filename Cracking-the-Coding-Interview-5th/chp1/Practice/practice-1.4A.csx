@@ -6,7 +6,7 @@ using System.Text;
 
 class Practice14A {
    public string ReplaceSpaces(string word) {
-       // Write your solution here
+      // Write your solution here
       return "";
    }
 

@@ -8,11 +8,11 @@ class Exercise16B
 {
     private void Transpose(int[,] matrix)
     {
+        // Since its a square matrix, outerLen will be same as innnerLen
         int outerLen = matrix.GetLength(0);
-        int innerLen = matrix.GetLength(1);
         for(int i = 0; i < outerLen; i++)
         {
-            for(int j = i; j < innerLen; j++)
+            for(int j = i; j < outerLen; j++)
             {
                 int temp = matrix[i, j];
                 matrix[i, j] = matrix[j, i];
