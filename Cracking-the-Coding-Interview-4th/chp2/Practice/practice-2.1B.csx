@@ -84,14 +84,19 @@ Practice21B practice = new Practice21B();
 
 Node list1 = practice.GenerateLinkedList(new int[]{1, 2, 3, 2, 7, 3, 9, 1, 1});
 Node listA = practice.GenerateLinkedList(new int[]{1, 2, 3, 7, 9});
+
 Node list2 = practice.GenerateLinkedList(new int[]{3, 7, 2, 2, 7, 1, 1, 5, 4, 3});
 Node listB = practice.GenerateLinkedList(new int[]{3, 7, 2, 1, 5, 4});
+
 Node list3 = practice.GenerateLinkedList(new int[]{4, 3, 6, 7, 2, 11, 7, 5, 2, 5});
 Node listC = practice.GenerateLinkedList(new int[]{4, 3, 6, 7, 2, 11, 5});
 
+Node list4 = practice.GenerateLinkedList(new int[]{3, 3});
+Node listD = practice.GenerateLinkedList(new int[]{3});
 Dictionary<Node, Node> testCases = new Dictionary<Node, Node> {
   {list1, listA},
   {list2, listB},
   {list3, listC},
+  {list4, listD},
 };
 practice.Test(testCases);
