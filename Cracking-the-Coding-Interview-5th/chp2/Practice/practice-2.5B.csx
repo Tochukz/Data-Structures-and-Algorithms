@@ -1,10 +1,12 @@
 /**
-Problem: You have two numbers represented by a linked list, where each node contains a single digit. 
-    The digits are stored in reverse order, such that the 1’s digit is at the head of the list.
-    Write a function that adds the two numbers and returns the sum as a linked list.
-    EXAMPLE
-    Input: (3 -> 1 -> 5) + (5 -> 9 -> 2)
-    Output: 8 -> 0 -> 8
+Problem:
+  You have two numbers represented by a linked list, where each node contains a
+  single digit. The digits are stored in forward order. 
+  Write a function that adds the two numbers and returns the sum
+  as a linked list.
+  EXAMPLE
+  Input: (6 -> 1 -> 7) + (2 -> 9 -> 5). That is, 617 + 295.
+  Output: 9 -> 1 -> 2. That is, 912.
 */
 using System;
 using System.Collections.Generic;
@@ -90,21 +92,21 @@ class Practice24 {
 
 Practice24 practice = new Practice24();
 
-Node list1 = practice.GenerateLinkedList(new int[]{3, 1, 5});
-Node list2 = practice.GenerateLinkedList(new int[]{5, 9, 2});
-Node sumA = practice.GenerateLinkedList(new int[]{8, 0, 8});
+Node list1 = practice.GenerateLinkedList(new int[]{6, 1, 7});
+Node list2 = practice.GenerateLinkedList(new int[]{2, 9, 5});
+Node sumA = practice.GenerateLinkedList(new int[]{9, 1, 2});
 
 Node list3 = practice.GenerateLinkedList(new int[]{6, 6, 7});
 Node list4 = practice.GenerateLinkedList(new int[]{1, 9, 2});
-Node sumB = practice.GenerateLinkedList(new int[]{7, 5, 0, 1});
+Node sumB = practice.GenerateLinkedList(new int[]{8, 5, 9});
 
-Node list5 = practice.GenerateLinkedList(new int[]{0, 6, 7});
-Node list6 = practice.GenerateLinkedList(new int[]{1, 3, 2});
-Node sumC = practice.GenerateLinkedList(new int[]{1, 9, 9});
+Node list5 = practice.GenerateLinkedList(new int[]{9, 6, 0});
+Node list6 = practice.GenerateLinkedList(new int[]{1, 7, 2});
+Node sumC = practice.GenerateLinkedList(new int[]{1, 1, 3, 2});
 
 Node list7 = practice.GenerateLinkedList(new int[]{7, 1, 6});
 Node list8 = practice.GenerateLinkedList(new int[]{5, 9, 2});
-Node sumD = practice.GenerateLinkedList(new int[]{2, 1, 9});
+Node sumD = practice.GenerateLinkedList(new int[]{1, 3, 0, 8});
 
 Dictionary<Node[], Node> testCases = new Dictionary<Node[], Node> {
   {new Node[]{list1, list2}, sumA},
@@ -112,4 +114,5 @@ Dictionary<Node[], Node> testCases = new Dictionary<Node[], Node> {
   {new Node[]{list5, list6}, sumC},
   {new Node[]{list7, list8}, sumD},
 };
+
 practice.Test(testCases);
