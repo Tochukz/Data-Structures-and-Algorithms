@@ -3,7 +3,7 @@ Problem: Reverse a linked list
    Given a linked list of N nodes. The task is to reverse this list.  
 
 Expected Time Complexity: O(N).
-Expected Auxiliary Space: O(1).
+Expected Auxiliary Space: O(N). You may use a temporary buffer such as Stack or List.
   
 */
 using System;
@@ -19,10 +19,10 @@ class Node {
   }
 }
 
-class Practice25 {
+class Practice26A {
   public Node ReverseList(Node head) {
     // Write your solution here
-    return new Node(0);
+    return head;
   }
 
   public bool AreEqual(Node head1, Node head2) {
@@ -87,7 +87,7 @@ class Practice25 {
   }
 }
 
-Practice25 practice = new Practice25();
+Practice26A practice = new Practice26A();
 
 Node list1 = practice.GenerateLinkedList(new int[]{1, 2, 3, 4, 5});
 Node reversedList1 = practice.GenerateLinkedList(new int[]{5, 4, 3, 2, 1});

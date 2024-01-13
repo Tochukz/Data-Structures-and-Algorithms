@@ -24,6 +24,7 @@ class SingleLinkedList
 {
     public Node Head;
 
+    /* Problem 1: check if the LinkedList is a circular linked list */
     public bool ContainsLoop()
     {
         HashSet<Node> set = new HashSet<Node>();
@@ -43,6 +44,7 @@ class SingleLinkedList
         return false;
     }
 
+     /* Problem 2: check if the LinkedList is a circular linked list without using a temporary buffer like, List, Dictionary or Stack. */
     /** Floyd’s Cycle-Finding Algorithm - The fastest method  */
     public bool ContainsLoop2()
     {
@@ -64,7 +66,7 @@ class SingleLinkedList
     }
 
     
-    /* Another problem: Finding the node at the beginning of the loop */
+    /* Problem 3: Another problem: Find the node at the beginning of the loop */
     public Node FindNodeAtLoopBegining()
     {
         if (Head == null)

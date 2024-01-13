@@ -22,7 +22,7 @@ class Node {
 class Practice24 {
   public Node AddLists(Node head1, Node head2) {
     // Write your solution here
-    return GenerateLinkedList(new int[]{0, 0, 0});
+    return new Node(0);
   }
 
   public bool AreEqual(Node head1, Node head2) {

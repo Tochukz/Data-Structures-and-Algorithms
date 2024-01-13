@@ -22,13 +22,14 @@ class Node {
   }
 }
 
-class Practice25 {
+class Practice25B {
   public Node FindNodeAtLoopBegining(Node head) {
     // Write your solution here
     return new Node(0);
   }
 
-  public void Test(Dictionary<Node, Node> testCases) {
+  public void Test(Dictionary<Node, Node> testCases, int[] listCounts) {
+    int i = 0;
     foreach(KeyValuePair<Node, Node> item in testCases) {
       Node head = item.Key;
       Node expectNode = item.Value;
@@ -43,7 +44,10 @@ class Practice25 {
           Console.WriteLine($" Expected: Node({expectNode.Data})");
         }
         Console.WriteLine($" Got: Node({result.Data})");
+        Console.WriteLine("Test List: ");
+        PrintCircularList(head, listCounts[i]);
       }
+      i++;
     }
   }
 
@@ -63,6 +67,15 @@ class Practice25 {
     return head;
   }
 
+  public void PrintCircularList(Node head, int len) {
+    Node current = head;
+    for(int i  = 0; i < len; i++) {
+      Console.Write($"{current.Data} ");
+      current = current.Next;
+    }
+    Console.WriteLine("");
+  }
+
   public Node MakeListCicular(Node head, int repeatIndex) {
     Node current = head;
     Node repeatNode = null;
@@ -75,12 +88,16 @@ class Practice25 {
           case 4: 
             current.Next = head.Next.Next.Next.Next;
             break;
+          case 6: 
+            current.Next = head.Next.Next.Next.Next.Next.Next;
+            break;
           default: 
-            current.Next = head.Next;
+            Console.WriteLine($"Invalid data: RepeatIndex {repeatIndex} not yet implemented!");
+            System.Environment.Exit(1);
             break;
         }
         repeatNode = current.Next;
-        Console.WriteLine($"Repeat Node1 is {repeatNode.Data}");
+        Console.WriteLine($"Repeat Node is {repeatNode.Data}");
         break;
       }
       current = current.Next;
@@ -89,19 +106,34 @@ class Practice25 {
   }
 }
 
-Practice25 practice = new Practice25();
+Practice25B practice = new Practice25B();
 
-Node list1 = practice.GenerateLinkedList(new int[]{1, 2, 3, 4, 5});
+int[] numbers1 = new int[]{1, 2, 3, 4, 5};
+Node list1 = practice.GenerateLinkedList(numbers1);
 Node repeatNode1 = practice.MakeListCicular(list1, 2);
 
-Node list2 = practice.GenerateLinkedList(new int[]{6, 7, 8, 9, 10, 11, 12});
+int[] numbers2 = new int[]{6, 7, 8, 9, 10, 11, 12};
+Node list2 = practice.GenerateLinkedList(numbers2);
 Node repeatNode2 = practice.MakeListCicular(list2, 4);
 
-Node list3 = practice.GenerateLinkedList(new int[]{3, 4, 5, 6, 7, 8});
+int[] numbers3 = new int[]{3, 4, 5, 6, 7, 8};
+Node list3 = practice.GenerateLinkedList(numbers3);
 
+int[] numbers4 = new int[]{4, 5, 7, 8, 9, 10, 11, 12, 13, 14};
+Node list4 = practice.GenerateLinkedList(numbers4);
+Node repeatNode4 = practice.MakeListCicular(list4, 6);
+
+// practice.PrintCircularList(list1, 6);
 Dictionary<Node, Node> testCases = new Dictionary<Node, Node> {
   {list1, repeatNode1},
   {list2, repeatNode2},
   {list3, null},
+  {list4, repeatNode4},
 };
-practice.Test(testCases);
+int[] listCounts = new int[] {
+  numbers1.Length + 1,
+  numbers2.Length + 1,
+  numbers3.Length,
+  numbers4.Length + 1,
+};
+practice.Test(testCases, listCounts);

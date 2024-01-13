@@ -1,0 +1,106 @@
+/**
+Problem: Reverse a linked list 
+   Given a linked list of N nodes. The task is to reverse this list.  
+
+Expected Time Complexity: O(N). 
+Expected Auxiliary Space: O(1). You may NOT use a temporal buffer such as a Stack or List;
+  
+*/
+using System;
+using System.Collections.Generic;
+
+class Node {
+  public int Data;
+
+  public Node Next;
+
+  public Node(int data) {
+    Data = data;
+  }
+}
+
+class Practice26B {
+  public Node ReverseList(Node head) {
+    // Write your solution here
+    return new Node(0);
+  }
+
+  public bool AreEqual(Node head1, Node head2) {
+    Node current1 = head1; 
+    Node current2 = head2;
+    while(current1 != null) {
+      if (current2 == null) {
+        return false;
+      }
+      if (current1.Data != current2.Data) {
+        return false;
+      }
+      current1 = current1.Next;
+      current2 = current2.Next;
+    }
+    if (current2 != null) {
+      return false;
+    }
+    return true;
+  }
+
+  public void PrintList(Node node) {
+    Node current = node; 
+    while(current != null) {
+        Console.Write($"{current.Data} ");
+        current = current.Next;
+    }
+    Console.WriteLine(" ");
+  }
+
+  public void Test(Dictionary<Node, Node> testCases) {
+    foreach(KeyValuePair<Node, Node> item in testCases) {
+      Node head = item.Key;
+      Node expected = item.Value;
+      Node result = ReverseList(head);
+      if (AreEqual(result, expected)) {
+        Console.WriteLine("Passed!");
+      } else {
+        Console.WriteLine("Failed!");
+        Console.WriteLine(" Expected: ");
+        PrintList(expected);
+        Console.WriteLine(" Got: ");
+        PrintList(result);
+      }
+    }
+  }
+
+  public Node GenerateLinkedList(int[] numbers) {
+    Node head = null;
+    Node current = null;
+    for (int i = 0; i < numbers.Length; i++) {
+      Node newNode = new Node(numbers[i]);
+      if (i == 0) {
+        head = newNode;
+        current = head;
+      } else {
+         current.Next = newNode;
+         current = newNode;
+      }
+    }
+    return head;
+  }
+}
+
+Practice26B practice = new Practice26B();
+
+Node list1 = practice.GenerateLinkedList(new int[]{1, 2, 3, 4, 5});
+Node reversedList1 = practice.GenerateLinkedList(new int[]{5, 4, 3, 2, 1});
+
+Node list2 = practice.GenerateLinkedList(new int[]{6, 7, 8, 9, 10, 11, 12});
+Node reversedList2 = practice.GenerateLinkedList(new int[]{12, 11, 10, 9, 8, 7, 6});
+
+Node list3 = practice.GenerateLinkedList(new int[]{3, 4, 5, 6, 7, 8});
+Node reversedList3 = practice.GenerateLinkedList(new int[]{8, 7, 6, 5, 4, 3});
+
+Dictionary<Node, Node> testCases = new Dictionary<Node, Node> {
+  {list1, reversedList1},
+  {list2, reversedList2},
+  {list3, reversedList3},
+};
+practice.Test(testCases);
