@@ -22,10 +22,68 @@ class Node {
   }
 }
 
-class Practice25B {
+class Exercise24 {
+  public void ReverseList(Node head) {
+    Stack<int> stack = new Stack<int>();
+    Node current = head;
+    while(current != null) {
+      stack.Push(current.Data);
+      current = current.Next;
+    }
+
+    current = head;
+    while(stack.Count > 0) {    
+      current.Data = stack.Pop();
+      current = current.Next;
+    }
+  }
+
   public Node AddLists(Node head1, Node head2) {
-    // Write your solution here
-    return new Node(0);
+    /* First you reverse both LinkedList */
+    ReverseList(head1);
+    ReverseList(head2);
+
+    /* Next, add the two list LinkedList together by their Data and manage carry over */
+    Node current1 = head1;
+    Node current2 = head2;
+    Node head = null;
+    Node current = null;
+    int carryOver = 0;
+    while(current1 != null || current2 != null) {
+      int x = 0;
+      int y = 0;
+      if (current1 != null) {
+        x = current1.Data;
+        current1 = current1.Next;
+      }
+      if (current2 != null) {
+        y = current2.Data;
+        current2 = current2.Next;
+      }
+      int sum = x + y + carryOver;
+      if (sum >= 10) {
+        carryOver = sum / 10;
+        sum = sum % 10;
+      } else {
+        carryOver = 0;
+      }
+
+      Node newNode = new Node(sum);
+      if (head == null) {
+        head = newNode;
+        current = newNode;
+      } else {
+        current.Next = newNode;
+        current = newNode;
+      }
+    }
+    if (carryOver > 0) {
+      current.Next = new Node(carryOver);
+    }
+
+    /* Finally, reverse the resulting LinkedList */
+    ReverseList(head);
+    return head;
   }
 
   public bool AreEqual(Node head1, Node head2) {
@@ -91,23 +149,23 @@ class Practice25B {
   }
 }
 
-Practice25B practice = new Practice25B();
+Exercise24 exercise = new Exercise24();
 
-Node list1 = practice.GenerateLinkedList(new int[]{6, 1, 7});
-Node list2 = practice.GenerateLinkedList(new int[]{2, 9, 5});
-Node sumA = practice.GenerateLinkedList(new int[]{9, 1, 2});
+Node list1 = exercise.GenerateLinkedList(new int[]{6, 1, 7});
+Node list2 = exercise.GenerateLinkedList(new int[]{2, 9, 5});
+Node sumA = exercise.GenerateLinkedList(new int[]{9, 1, 2});
 
-Node list3 = practice.GenerateLinkedList(new int[]{6, 6, 7});
-Node list4 = practice.GenerateLinkedList(new int[]{1, 9, 2});
-Node sumB = practice.GenerateLinkedList(new int[]{8, 5, 9});
+Node list3 = exercise.GenerateLinkedList(new int[]{6, 6, 7});
+Node list4 = exercise.GenerateLinkedList(new int[]{1, 9, 2});
+Node sumB = exercise.GenerateLinkedList(new int[]{8, 5, 9});
 
-Node list5 = practice.GenerateLinkedList(new int[]{9, 6, 0});
-Node list6 = practice.GenerateLinkedList(new int[]{1, 7, 2});
-Node sumC = practice.GenerateLinkedList(new int[]{1, 1, 3, 2});
+Node list5 = exercise.GenerateLinkedList(new int[]{9, 6, 0});
+Node list6 = exercise.GenerateLinkedList(new int[]{1, 7, 2});
+Node sumC = exercise.GenerateLinkedList(new int[]{1, 1, 3, 2});
 
-Node list7 = practice.GenerateLinkedList(new int[]{7, 1, 6});
-Node list8 = practice.GenerateLinkedList(new int[]{5, 9, 2});
-Node sumD = practice.GenerateLinkedList(new int[]{1, 3, 0, 8});
+Node list7 = exercise.GenerateLinkedList(new int[]{7, 1, 6});
+Node list8 = exercise.GenerateLinkedList(new int[]{5, 9, 2});
+Node sumD = exercise.GenerateLinkedList(new int[]{1, 3, 0, 8});
 
 Dictionary<Node[], Node> testCases = new Dictionary<Node[], Node> {
   {new Node[]{list1, list2}, sumA},
@@ -116,4 +174,4 @@ Dictionary<Node[], Node> testCases = new Dictionary<Node[], Node> {
   {new Node[]{list7, list8}, sumD},
 };
 
-practice.Test(testCases);
+exercise.Test(testCases);

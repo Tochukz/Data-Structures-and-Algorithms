@@ -21,10 +21,24 @@ class Node {
   }
 }
 
-class Practice27 {
+class Exercise27 {
   public bool IsPalindrome(Node head) {
-    // Write your solution here
-    return false;
+    Stack<int> stack = new Stack<int>();
+    Node current = head;
+    while(current != null) {
+        stack.Push(current.Data);
+        current = current.Next;
+    }
+    
+    current = head;
+    while(stack.Count > 0) {
+        int data = stack.Pop();
+        if (data != current.Data) {
+            return false;
+        }
+        current = current.Next;
+    }
+    return true;
   }
 
   public void PrintList(Node node) {
@@ -70,7 +84,7 @@ class Practice27 {
   }
 }
 
-Practice27 practice = new Practice27();
+Exercise27 practice = new Exercise27();
 Node list1 = practice.GenerateLinkedList(new int[]{1, 2, 3, 2, 1});
 Node list2 = practice.GenerateLinkedList(new int[]{4, 1, 5, 5, 1, 4});
 Node list3 = practice.GenerateLinkedList(new int[]{4, 1, 5, 2, 1, 4});
