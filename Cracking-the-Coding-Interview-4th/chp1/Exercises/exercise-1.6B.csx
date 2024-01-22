@@ -73,6 +73,23 @@ class Exercise16B
         }
     }
 
+    /* Another way to implement a flip180 */
+    public void Flip2(int[,] matrix) {
+      int outerLen = matrix.GetLength(0);
+      int innerLen = matrix.GetLength(1);
+      for (int i = 0; i < innerLen ; i++) {
+         int startIndex = 0;
+         int endIndex = outerLen - 1;
+         while(startIndex < endIndex) {
+            int copy = matrix[startIndex, i];
+            matrix[startIndex, i] = matrix[endIndex, i];
+            matrix[endIndex, i] = copy;
+            startIndex++;
+            endIndex--;
+         }
+      }
+    }
+
     public void PrintMatrix(int[,] matrix)
     {
         for(int i = 0; i < matrix.GetLength(0); i++)
@@ -121,6 +138,7 @@ Console.WriteLine("Matrix Rotate 90 Anti-clockwise:");
 exer.PrintMatrix(matrix2);
 
 exer.Flip180(matrix3);
+//exer.Flip2(matrix3);
 Console.WriteLine("Matrix 180 Deg rotate:");
 exer.PrintMatrix(matrix3);
 
