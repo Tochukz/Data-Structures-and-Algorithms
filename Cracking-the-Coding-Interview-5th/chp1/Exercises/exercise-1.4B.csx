@@ -8,31 +8,25 @@ using System.Text;
 
 class Exercise14B {
    public void ReplaceSpaces(char[] word) {      
-      // Find the last char elment in the character array. Stop when you find a null element
-      int lastCharIndex = 0;
+      // Find the last char element in the character array. Stop when you find a null element
+      int lastNonEmptyIndex = 0;
       for (int i = 0; i < word.Length; i++) {
-         char x = word[i];
-         if (x == '\0') {
-           lastCharIndex = i - 1;
+         if (word[i] == '\0') {
+           lastNonEmptyIndex = i - 1;
            break;
          }
-      }
+      }  
 
-      // Fill the array from the back start with starting with the last charater
-      int k = lastCharIndex;
-      int j = word.Length - 1;
-      while (j >= 0)  {
-         char x = word[k];
-         if (x == ' ') {
-            word[j--] = '0';
-            word[j--] = '2';
-            word[j--] = '%';
-            k--;
-            continue;
-         }
-         word[j--] = word[k--];
-         if (k < 0) {
-            break;
+      // Fill the array from the back starting with the last charater
+      int lastIndex = word.Length - 1;
+      for (int i = lastNonEmptyIndex; i >= 0 ; i--) {
+         char lastChar = word[i]; 
+         if (lastChar == ' ') {
+            word[lastIndex--] = '0';
+            word[lastIndex--] = '2';
+            word[lastIndex--] = '%';
+         } else {
+            word[lastIndex--] = lastChar;
          }
       }
    }

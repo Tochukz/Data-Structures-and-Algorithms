@@ -6,7 +6,7 @@
 
 using System.Text;
 
-class Exercise15 {
+class Practice15 {
     public string Compress(string str) {
         // Write your solution here
         return "";
@@ -24,10 +24,10 @@ class Exercise15 {
     } 
 }
 
-Exercise15 exercise = new Exercise15();
+Practice15 practice = new Practice15();
 Dictionary<string, string> testCases = new Dictionary<string, string> {
   {"aabcccccaaa", "a2b1c5a3"},
   {"abcfp", "abcfp"},
   {"ttpppppij", "t2p5i1j1"}
 };
-exercise.Test(testCases);
+practice.Test(testCases);

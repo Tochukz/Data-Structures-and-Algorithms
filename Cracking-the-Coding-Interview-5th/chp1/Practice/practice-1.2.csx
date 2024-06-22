@@ -1,10 +1,10 @@
 /**
-* Problem: Implement a function ro reverse a string 
+* Problem: Implement a function to reverse a string 
 */
 using System.Text;
 using System.Collections.Generic;
 
-class Exercise12 {
+class Practice12 {
   public string Reverse(string word) {
     // Write your solution here
     return '';
@@ -22,11 +22,11 @@ class Exercise12 {
   }
 }
 
-Exercise12 exercise = new Exercise12();
+Practice12 practice = new Practice12();
 Dictionary<string, string> testCases = new Dictionary<string, string> {
   {"Hello", "olleH"},
   {"Tiger", "regiT"},
   {"Hippopotamouse", "esuomatopoppiH"},
   {"Peter", "reteP"}
 };
-exercise.Test(testCases);
+practice.Test(testCases);

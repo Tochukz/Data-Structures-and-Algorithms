@@ -3,6 +3,8 @@ Problem: Reverse a linked list
    Given pointer to the head node of a linked list, the task is to reverse the linked list. 
    We need to reverse the list by changing the links between nodes.
 */
+using System;
+using System.Collections.Generic;
 
 class Node 
 {
@@ -32,7 +34,7 @@ class ExerciseA
         return head;
     }
      
-    /* Using recusive method to reverse the linkes lists */
+    /* Solution 1: Using recusive method to reverse the linked lists */
     public Node Reverse(Node head)
     {
         if (head == null || head.Next == null)
@@ -48,7 +50,7 @@ class ExerciseA
     }
     
     
-    /* Using Stack to revese the linked list */
+    /* Solution 2: Using Stack to revese the linked list */
     public void Reverse2(Node head)
     {
         Stack<int> stack  = new Stack<int>();

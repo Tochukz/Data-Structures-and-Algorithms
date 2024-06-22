@@ -1,29 +1,29 @@
 /**
-* Problem: Implement an algorithm to determine if a string has all unique charaters. 
-* Your implementation should not use any additional data structure
+* Problem:  
+*   Implement an algorithm to determine if a string has all unique characters without using an additional data structures.
 */
 using System;
 using System.Collections.Generic;
 
-class Practice11A {
-   public bool IsUniqueString(string word) {
+class Practice11B {
+   public bool IsUniqueChars(string word) {
       // Write your solution here
-      return true;
+     return true;
    }
 
    public void Test(Dictionary<string, bool> testCases) {
      foreach (KeyValuePair<string, bool> item in testCases) {
-        bool resultVal = IsUniqueString(item.Key);
+        bool resultVal = IsUniqueChars(item.Key);
         if (item.Value == resultVal) {
-           Console.WriteLine("Pass!");
+           Console.WriteLine("Passed!");
         } else {
-          Console.WriteLine($"Fail {item.Value} should return {resultVal}");
+          Console.WriteLine($"Failed: Expected {item.Value}, got {resultVal}");
         }        
      }  
    }
 }
 
-Practice11A practice = new Practice11A();
+Practice11B Practice = new Practice11B();
 Dictionary<string, bool> testCases = new Dictionary<string, bool> {
     {"Hello", false},
     {"Chima", true},
@@ -32,4 +32,4 @@ Dictionary<string, bool> testCases = new Dictionary<string, bool> {
     {"Javis", true}
 };
 
-practice.Test(testCases)
+Practice.Test(testCases)

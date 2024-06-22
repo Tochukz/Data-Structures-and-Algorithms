@@ -7,7 +7,7 @@ __By Gayle Laakmann__
 __My Code Examples__  
 The original examples in the book was written in Java. I have adapted my own examples for C# and compiled them using the `csi.exe`  
 
-__Using csi to compile C# Code__  
+__Using Roslyn's interactive scripting environment (csi) to run C# Code__  
 You can use `csi.exe` to interpret C# script file
  * Write you C# code and save it as `.csx` file
  ```
@@ -17,12 +17,21 @@ You can use `csi.exe` to interpret C# script file
  ```
  > "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Roslyn\csi" myscript.csx
  ```
- * You can also add the `csi.exe` to your path to make the `csi` command available every where so that you can simple do:  
+ * You can also add the `csi.exe` to your path to make the `csi` command available everywhere so that you can simple do:  
  ```
  >  csi myscript.csx
  ```  
 
+__Roslyn's interactive scripting environment (csi) on MacOS__  
 If you are on MacOS, you can install _Visual Studio For Mac_ and `csi` will be available on your terminal.  
+Alternatively, you can install _csi_ tool using _dotnet_ cli
+```
+$ dotnet tool install -g dotnet-csi
+```  
+After that, you can run your C# code using _dotnet csi_  
+```
+$ dotnet csi myscript.csx
+```  
 
  __Why use csi__  
  `csi` will allow you to write top level statement outside of a class method. For example, the following code can be written outside of a class method.

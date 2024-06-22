@@ -56,31 +56,20 @@ class SinglyLinkedList
         {
             throw new Exception("The linked list is empty");
         }
-        Node runningNode = Head;
-        while (runningNode != null)
-        {   
-            Node prevNode = null;
-            Node currentNode = runningNode.Next;
-            while (currentNode != null)
-            {
-                if (runningNode.Data == currentNode.Data)
-                {
-                    if (prevNode == null)
-                    {
-                        runningNode.Next = currentNode.Next;
-                    }
-                    else 
-                    {
-                        prevNode.Next = currentNode.Next;
-                    }
+        Node running = Head;
+        while(running != null) {
+            Node nextRunning = running.Next;
+            Node previous = running;
+            Node current = running.Next;
+            while(current != null) {
+                if (current.Data == running.Data) {
+                    previous.Next = current.Next;
+                } else {
+                    previous = current;
                 }
-                else 
-                {
-                    prevNode = currentNode;                    
-                }
-                currentNode = currentNode.Next;
+                current = current.Next;
             }
-            runningNode = runningNode.Next;
+            running = nextRunning;
         }
     }
 }

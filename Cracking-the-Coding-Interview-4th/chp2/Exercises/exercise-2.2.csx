@@ -35,7 +35,37 @@ class SinglyLinkedList
         }
     }
 
-    public int FindNthToLast(int n)
+  // This solution uses a while loop for the second iteration.
+    public int FindNthToLast(int n) {
+        if (Head == null) {
+            throw new Exception("The linked list is empty");
+        }
+        int len = 0;
+        Node current = Head; 
+        while(current != null) {
+            len++;
+            current = current.Next;
+        }
+
+        if (n > len) {
+            return -1;
+        }
+        int nthLast = (len - n) + 1;   
+        current = Head;
+        int i = 0;
+        while(current != null) {
+            i++;      
+            if (i == nthLast) {
+                return current.Data;
+            }
+            current = current.Next;
+        }
+        return -1;
+    }
+
+    
+    // This solution uses a for loop for the second iteration.
+    public int FindNthToLast2(int n)
     {
         if (Head == null)
         {

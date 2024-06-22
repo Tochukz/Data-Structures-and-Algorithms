@@ -1,6 +1,11 @@
 /**
 Problem: 
   Given a circular linked list, implement an algorithm which returns node at the beginning of the loop.
+Definition:
+  Circular linked list: A (corrupt) linked list in which a node’s next pointer points to an earlier node, so as to make a loop in the linked list.
+Example:
+  input: A -> B -> C -> D -> E -> C [the same C as earlier]
+  output: C
 */
 
 class Node 
@@ -19,6 +24,7 @@ class SingleLinkedList
 {
     public Node Head;
 
+    /* Problem 1: check if the LinkedList is a circular linked list */
     public bool ContainsLoop()
     {
         HashSet<Node> set = new HashSet<Node>();
@@ -38,6 +44,7 @@ class SingleLinkedList
         return false;
     }
 
+     /* Problem 2: check if the LinkedList is a circular linked list without using a temporary buffer like, List, Dictionary or Stack. */
     /** Floyd’s Cycle-Finding Algorithm - The fastest method  */
     public bool ContainsLoop2()
     {
@@ -59,7 +66,7 @@ class SingleLinkedList
     }
 
     
-    /* Another problem: Finding the node at the beginning of the loop */
+    /* Problem 3: Another problem: Find the node at the beginning of the loop */
     public Node FindNodeAtLoopBegining()
     {
         if (Head == null)

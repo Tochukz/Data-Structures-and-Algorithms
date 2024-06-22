@@ -7,9 +7,9 @@
 using System;
 using System.Collections.Generic;
 
-class Exercise18 {
+class Practice18 {
    public bool IsRotationOf(string word1, string word2) {
-       // Write your solution here
+      // Write your solution here
       return false;
    }
 
@@ -30,10 +30,10 @@ class Exercise18 {
 } 
 
 
-Exercise18 exercise = new Exercise18();
+Practice18 practice = new Practice18();
 Dictionary<string[], bool> testCases = new Dictionary<string[], bool> {
   {new string[]{"waterbottle", "erbottlewat"}, true},
   {new string[]{"rellay", "layrel"}, true},
   {new string[]{"mackitask", "kimactask"}, false},
 };
-exercise.Test(testCases);
+practice.Test(testCases);

@@ -7,7 +7,7 @@
 using System;
 using System.Collections.Generic;
 
-class Exercise16B {
+class Practice16B {
 
     public void RotateRight(int[,] matrix) {
         // Write your solution here
@@ -26,6 +26,12 @@ class Exercise16B {
         return true;
     }
 
+    public bool IsSquareMaxtrix(int[,] matrix) {
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
+        return rows == cols;
+    }
+
     public void PrintMatrix(int[,] matrix) {
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
@@ -40,6 +46,10 @@ class Exercise16B {
 
     public void Test(Dictionary<int[,], int[,]> testCases) {
         foreach(KeyValuePair<int[,], int[,]> item in testCases) {
+            if (!IsSquareMaxtrix(item.Key) || !IsSquareMaxtrix(item.Value)) {
+                Console.WriteLine("Arguments of the test cases must be NxN square matrices!");
+                return;
+            }
            RotateRight(item.Key);
            if (AreEqual(item.Key, item.Value)) {
               Console.WriteLine("Pass!");
@@ -78,5 +88,5 @@ Dictionary<int[,], int[,]> testCases = new Dictionary<int[,], int[,]> {
     {matrix1A, matrix1B},
     {matrix2A, matrix2B}
 };
-Exercise16B exercise = new Exercise16B();
-exercise.Test(testCases);
+Practice16B practice = new Practice16B();
+practice.Test(testCases);
